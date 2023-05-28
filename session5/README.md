@@ -1,7 +1,7 @@
 # Submission for Week 5
 - [Problem Statement](#Problem-Statement)
 - [Model Parameters](#Model-Parameters)
-- [RF and output shape Calculations For Network](#RF-and-output-shape-Calculations-For-Network)
+- [Receptive Field and Output Shape Calculation of Layers](#RF-and-output-shape-Calculations-For-Network)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Sample Output](#Sample-Output)
