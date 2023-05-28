@@ -43,7 +43,16 @@
 
 # Receptive Field and Output Shape Calculation of Layers
 
-![](images/rf.png)
+
+Layer |  receptive-field_in |  n_in |   j_in |   stride |  padding |  kernel_size  | recptive-field out | n_out |  j_out   
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |
+conv1 |  1 |  28|  1 |  1 |  0 |  3 |  3 |  26 | 1  | 
+conv2 |  3  | 26 | 1  | 1  | 0 |  3  | 5  | 24 | 1  | 
+maxpool |5 |  24 | 1 |  2 |  0 |  2  | 6  | 12 | 2  | 
+conv3 |  6 |  12|  2 |  1 |  0 |  3  | 10 | 10 | 2  | 
+conv4 |  10 | 10| 2  | 1  | 0  | 3  | 14 | 8|   2  |
+maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|   
+
 
 
 # Training Logs
@@ -119,5 +128,4 @@ Here is the sample result of model classification
 Here is the sample result of model miss-classified images
 
 ![](images/miss_classified.png)
-
 
