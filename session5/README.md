@@ -1,16 +1,35 @@
 # Submission for Week 5
 - [Problem Statement](#Problem-Statement)
+- [File Structure](#File-Structure)
 - [Model Parameters](#Model-Parameters)
-- [Receptive Field and Output Shape Calculation of Layers](#Receptive-Field-and-Output-Shape-Calculation-of-Layers)
+- [RF and output shape Calculations For Network](#RF-and-output-shape-Calculations-For-Network)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Sample Output](#Sample-Output)
     * [Misclassified Images](#Misclassified-Images)
+    * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class )
 
+# File Structure
+* model.py 
+    * Contains Model Architecture
+* utils.py
+    * Contains all the functions which are required to initiate the training
+        * Contains data augmentation
+        * Test and Train functions 
+        * Plotting Misclassified results and random prediction code 
+        * Contains code for plotting the accuracy and loss plot on test and train set
+* S5.ipynb
+    * contains execution of imports from these files
+    * One file which compiles down all the code required for training
+* logs/ 
+    * collects logs from each and every file 
+    * mainly used for collecting loss and accuracy during training
+* .gitignore
+    * For not pushing the unnecessary things available in code folder
 
 
 # Problem Statement
-
+### Training CNN for MNIST dataset
 1. Re-look at the code that we worked on in Assignment 4 (the fixed version)
 2. Move the contents of the code to the following files -> model.py, utils.py and s5.ipynb
 3. Make the whole code run again
@@ -19,6 +38,11 @@
 
 
 # Model Parameters
+
+* Here is the quick information regarding the model :
+    * There are 593,000 total parameters used in the model 
+    * There are 4 convolution and 2 max pooling layers are used 
+    * The kernel_size for convolution layer is (3x3) and for max-pooling kernel_size is 2 and stride is 2 
 
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
@@ -43,7 +67,6 @@
 
 # Receptive Field and Output Shape Calculation of Layers
 
-
 Layer |  receptive-field_in |  n_in |   j_in |   stride |  padding |  kernel_size  | recptive-field out | n_out |  j_out   
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |
 conv1 |  1 |  28|  1 |  1 |  0 |  3 |  3 |  26 | 1  | 
@@ -52,7 +75,6 @@ maxpool |5 |  24 | 1 |  2 |  0 |  2  | 6  | 12 | 2  |
 conv3 |  6 |  12|  2 |  1 |  0 |  3  | 10 | 10 | 2  | 
 conv4 |  10 | 10| 2  | 1  | 0  | 3  | 14 | 8|   2  |
 maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|   
-
 
 
 # Training Logs
@@ -67,7 +89,7 @@ maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|
     INFO:utils:Test set: Average loss: 1.3531, Accuracy: 6476/10000 (64.76%)
 
     Test set: Average loss: 1.3531, Accuracy: 6476/10000 (64.76%)
-
+----------------------------------------------------------------
     Adjusting learning rate of group 0 to 1.0000e-02.
     Epoch 2
     Train: Loss=0.5771 Batch_id=14 Accuracy=74.43:  22%|██▏       | 13/59 [00:05<00:16,  2.86it/s]INFO:utils:Train: Loss=0.5771 Batch_id=14 Accuracy=74.43
@@ -77,7 +99,7 @@ maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|
     INFO:utils:Test set: Average loss: 0.1744, Accuracy: 9484/10000 (94.84%)
 
     Test set: Average loss: 0.1744, Accuracy: 9484/10000 (94.84%)
-
+----------------------------------------------------------------
     Adjusting learning rate of group 0 to 1.0000e-03.
     Epoch 3
     Train: Loss=0.2550 Batch_id=14 Accuracy=92.74:  24%|██▎       | 14/59 [00:05<00:15,  2.96it/s]INFO:utils:Train: Loss=0.2550 Batch_id=14 Accuracy=92.74
@@ -87,7 +109,7 @@ maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|
     INFO:utils:Test set: Average loss: 0.1557, Accuracy: 9537/10000 (95.37%)
 
     Test set: Average loss: 0.1557, Accuracy: 9537/10000 (95.37%)
-
+----------------------------------------------------------------
     Adjusting learning rate of group 0 to 1.0000e-03.
     Epoch 4
     Train: Loss=0.2396 Batch_id=14 Accuracy=93.26:  22%|██▏       | 13/59 [00:05<00:15,  3.00it/s]INFO:utils:Train: Loss=0.2396 Batch_id=14 Accuracy=93.26
@@ -97,7 +119,7 @@ maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|
     INFO:utils:Test set: Average loss: 0.1457, Accuracy: 9565/10000 (95.65%)
 
     Test set: Average loss: 0.1457, Accuracy: 9565/10000 (95.65%)
-
+----------------------------------------------------------------
     Adjusting learning rate of group 0 to 1.0000e-04.
     Epoch 5
     Train: Loss=0.1590 Batch_id=14 Accuracy=93.80:  22%|██▏       | 13/59 [00:06<00:16,  2.81it/s]INFO:utils:Train: Loss=0.1590 Batch_id=14 Accuracy=93.80
@@ -107,7 +129,7 @@ maxpool| 14 | 8 |  2 |  2 |  0|   2|   16|  4 |  4|
     INFO:utils:Test set: Average loss: 0.1431, Accuracy: 9570/10000 (95.70%)
 
     Test set: Average loss: 0.1431, Accuracy: 9570/10000 (95.70%)
-
+----------------------------------------------------------------
     Adjusting learning rate of group 0 to 1.0000e-04.
 
 
@@ -129,3 +151,15 @@ Here is the sample result of model miss-classified images
 
 ![](images/miss_classified.png)
 
+## Accuracy Report for Each class   
+
+* Accuracy of 0 - zero : 100 %
+* Accuracy of 1 - one : 94 %
+* Accuracy of 2 - two : 100 %
+* Accuracy of 3 - three : 100 %
+* Accuracy of 4 - four : 100 %
+* Accuracy of 5 - five : 100 %
+* Accuracy of 6 - six : 100 %
+* Accuracy of 7 - seven : 83 %
+* Accuracy of 8 - eight : 100 %
+* Accuracy of 9 - nine : 100 %

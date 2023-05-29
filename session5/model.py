@@ -1,6 +1,7 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
+# The Neural network architecture
 class Net(nn.Module):
     #This defines the structure of the NN.
     def __init__(self):

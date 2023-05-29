@@ -191,3 +191,26 @@ def plot_misclassified(model,grid_size,test_loader,device):
     plt.imshow(img.squeeze(), cmap="gray") # showing the plot
 
   plt.show()
+
+# For calculating accuracy per class
+def calculate_accuracy_per_class(model,device,test_loader,test_data):  
+  model = model.to(device)
+  model.eval()
+  class_correct = list(0. for i in range(10))
+  class_total = list(0. for i in range(10))
+  with torch.no_grad():
+      for data in test_loader:
+          images, labels = data
+          images, labels = images.to(device), labels.to(device)
+          outputs = model(images.to(device))
+          _, predicted = torch.max(outputs, 1)
+          c = (predicted == labels).squeeze()
+          for i in range(10):
+              label = labels[i]
+              class_correct[label] += c[i].item()
+              class_total[label] += 1
+
+  classes = test_data.classes
+  for i in range(10):
+      print('Accuracy of %5s : %2d %%' % (
+          classes[i], 100 * class_correct[i] / class_total[i]))
