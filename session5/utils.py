@@ -51,14 +51,14 @@ def data_transformation(transformation_matrix):
 def GetCorrectPredCount(pPrediction, pLabels):
   return pPrediction.argmax(dim=1).eq(pLabels).sum().item()
 
-def train(model, device, train_loader, optimizer,train_losses,train_acc):
+def train(model, device, train_loader, optimizer, criterion,train_losses,train_acc):
   model.train()
   pbar = tqdm(train_loader)
-  log_msg_count = 0
+
   train_loss = 0
   correct = 0
   processed = 0
-
+  log_count = 0
   for batch_idx, (data, target) in enumerate(pbar):
     data, target = data.to(device), target.to(device)
     optimizer.zero_grad()
@@ -67,7 +67,7 @@ def train(model, device, train_loader, optimizer,train_losses,train_acc):
     pred = model(data)
 
     # Calculate loss
-    loss = F.nll_loss(pred, target)
+    loss = criterion(pred, target)
     train_loss+=loss.item()
 
     # Backpropagation
@@ -78,16 +78,15 @@ def train(model, device, train_loader, optimizer,train_losses,train_acc):
     processed += len(data)
 
     pbar.set_description(desc= f'Train: Loss={loss.item():0.4f} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
-    log_msg_count+=1
-    
-    if log_msg_count%15 == 0:
-        logger.info(f'Train: Loss={loss.item():0.4f} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
+    log_count+=1
+    if log_count%15==0:
+      logger.info(f'Train: Loss={loss.item():0.4f} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
   
   train_acc.append(100*correct/processed)
   train_losses.append(train_loss/len(train_loader))
   return train_losses,train_acc
 
-def test(model, device, test_loader,test_losses,test_acc):
+def test(model, device, test_loader, criterion,test_losses,test_acc):
     model.eval()
 
     test_loss = 0
@@ -98,7 +97,7 @@ def test(model, device, test_loader,test_losses,test_acc):
             data, target = data.to(device), target.to(device)
 
             output = model(data)
-            test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
+            test_loss += criterion(output, target).item()  # sum up batch loss
 
             correct += GetCorrectPredCount(output, target)
 
@@ -114,7 +113,7 @@ def test(model, device, test_loader,test_losses,test_acc):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
     return test_losses,test_acc
-    
+
 def fit_model(model,training_parameters,train_loader,test_loader,device):
     train_losses = []
     test_losses = []
@@ -123,11 +122,11 @@ def fit_model(model,training_parameters,train_loader,test_loader,device):
 
     optimizer = optim.SGD(model.parameters(), lr=training_parameters["learning_rate"], momentum=training_parameters["momentum"])
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=training_parameters["step_size"], gamma=training_parameters["gamma"], verbose=True)
-
+    criterion = nn.CrossEntropyLoss()
     for epoch in range(1, training_parameters["num_epochs"]+1):
         print(f'Epoch {epoch}')
-        train_losses,train_acc = train(model, device, train_loader, optimizer,train_losses,train_acc)
-        test_losses,test_acc = test(model, device, test_loader,test_losses,test_acc)
+        train_losses,train_acc = train(model, device, train_loader, optimizer,criterion,train_losses,train_acc)
+        test_losses,test_acc = test(model, device, test_loader,criterion,test_losses,test_acc)
         scheduler.step()
         
     logging.info('Training Losses : %s', train_losses)
@@ -209,8 +208,17 @@ def calculate_accuracy_per_class(model,device,test_loader,test_data):
               label = labels[i]
               class_correct[label] += c[i].item()
               class_total[label] += 1
-
+  final_output = {}
   classes = test_data.classes
   for i in range(10):
       print('Accuracy of %5s : %2d %%' % (
           classes[i], 100 * class_correct[i] / class_total[i]))
+      final_output[classes[i].split("-")[1]] = 100 * class_correct[i] / class_total[i]
+      
+  original_class = list(final_output.keys())
+  class_accuracy = list(final_output.values())
+  plt.figure(figsize=(8, 6))
+  plt.bar(original_class, class_accuracy)
+  plt.xlabel('classes')
+  plt.ylabel('accuracy')
+  plt.show()
