@@ -10,6 +10,7 @@
   * [PART-1](#PART-1)
   * [PART-2](#PART-2)
 - [Experimentation](#Experimentation)
+- [Sample Work](#Sample-Work)
 - [Conclusion](#Conclusion)
 # Problem Statement
 
@@ -390,6 +391,12 @@ Once we run it with different learning rates as mentioned above we get these cur
 
 
 ![](images/results.png)
+
+
+# Sample Work
+
+![](images/sample.png)
+
 
 
 # Conclusion 
