@@ -2,7 +2,7 @@
 - [Problem Statement](#Problem-Statement)
 - [File Structure](#File-Structure)
 - [Model Parameters](#Model-Parameters)
-- [Receptive Field and Output Shape Calculation of Layers](#Receptive Field and Output Shape Calculation of Layers)
+- [Receptive Field and Output Shape Calculation of Layers](#Receptive-Field-and-Output-Shape-Calculation-of-Layers)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Sample Output](#Sample-Output)
