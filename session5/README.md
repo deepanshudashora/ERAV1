@@ -2,7 +2,7 @@
 - [Problem Statement](#Problem-Statement)
 - [File Structure](#File-Structure)
 - [Model Parameters](#Model-Parameters)
-- [RF and output shape Calculations For Network](#RF-and-output-shape-Calculations-For-Network)
+- [Receptive Field and Output Shape Calculation of Layers](#Receptive Field and Output Shape Calculation of Layers)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Sample Output](#Sample-Output)
