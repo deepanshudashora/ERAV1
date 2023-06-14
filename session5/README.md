@@ -1,6 +1,6 @@
 # Submission for Week 5
-- [Problem Statement](#Problem-Statement)
 - [File Structure](#File-Structure)
+- [Problem Statement](#Problem-Statement)
 - [Model Parameters](#Model-Parameters)
 - [Receptive Field and Output Shape Calculation of Layers](#Receptive-Field-and-Output-Shape-Calculation-of-Layers)
 - [Results](#Results)
