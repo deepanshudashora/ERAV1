@@ -67,12 +67,12 @@ Model Comparision
 
 # Model Parameters
 
----
+---------------------------------------------------------------
 
 Layer (type)               Output Shape         Param #
--------------------------------------------------------
+---------------------------------------------------------------
 
-Conv2d-1            [-1, 4, 26, 26]              36
+            Conv2d-1            [-1, 4, 26, 26]              36
               ReLU-2            [-1, 4, 26, 26]               0
        BatchNorm2d-3            [-1, 4, 26, 26]               8
            Dropout-4            [-1, 4, 26, 26]               0
@@ -113,14 +113,14 @@ Conv2d-1            [-1, 4, 26, 26]              36
 * Trainable params: 6,084
 * Non-trainable params: 0
 
----
+---------------------------------------------------------------
 
 * Input size (MB): 0.00
 * Forward/backward pass size (MB): 0.40
 * Params size (MB): 0.02
 * Estimated Total Size (MB): 0.43
 
----
+---------------------------------------------------------------
 
 # Receptive Field and Output Shape Calculation of Best Model
 
