@@ -216,17 +216,17 @@ Estimated Total Size (MB): 0.43
 ## Accuracy Plot
 Here is the Accuracy and Loss metric plot for the model 
 
-![](images/metric_plot.png)
+![](Module 3 (Final Results)/Best_with_reduced_param/images/accuracy_plot.png.png)
 
 ## Sample Output
 Here is the sample result of model classification 
 
-![](images/results.png)
+![](Module 3 (Final Results)/Best_with_reduced_param/images/prediction.png.png)
 
 ## Misclassified Images
 Here is the sample result of model miss-classified images
 
-![](images/miss_classified.png)
+![](Module 3 (Final Results)/Best_with_reduced_param/images/missclassified.png.png)
 
 ## Accuracy Report for Each class   
 
@@ -241,5 +241,5 @@ Here is the sample result of model miss-classified images
     Accuracy of 8 - eight : 100 %
     Accuracy of 9 - nine : 100 %
     
-![](images/each_class.png)
+![](Module 3 (Final Results)/Best_with_reduced_param/images/accuracy_per_class.png.png)
 
