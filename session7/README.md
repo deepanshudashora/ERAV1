@@ -65,7 +65,7 @@ Model Comparision
 
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
-================================================================
+----------------------------------------------------------------
             Conv2d-1            [-1, 4, 26, 26]              36
               ReLU-2            [-1, 4, 26, 26]               0
        BatchNorm2d-3            [-1, 4, 26, 26]               8
@@ -101,15 +101,15 @@ Model Comparision
           Dropout-33             [-1, 16, 4, 4]               0
         AvgPool2d-34             [-1, 16, 1, 1]               0
            Conv2d-35             [-1, 10, 1, 1]             160
-================================================================
-Total params: 6,084
-Trainable params: 6,084
-Non-trainable params: 0
 ----------------------------------------------------------------
-Input size (MB): 0.00
-Forward/backward pass size (MB): 0.40
-Params size (MB): 0.02
-Estimated Total Size (MB): 0.43
+* Total params: 6,084
+* Trainable params: 6,084
+* Non-trainable params: 0
+----------------------------------------------------------------
+* Input size (MB): 0.00
+* Forward/backward pass size (MB): 0.40
+* Params size (MB): 0.02
+* Estimated Total Size (MB): 0.43
 ----------------------------------------------------------------
 
 # Receptive Field and Output Shape Calculation of Best Model
@@ -216,17 +216,17 @@ Estimated Total Size (MB): 0.43
 ## Accuracy Plot
 Here is the Accuracy and Loss metric plot for the model 
 
-![](Module 3 (Final Results)/Best_with_reduced_param/images/accuracy_plot.png.png)
+![](images/accuracy_plot.png.png)
 
 ## Sample Output
 Here is the sample result of model classification 
 
-![](Module 3 (Final Results)/Best_with_reduced_param/images/prediction.png.png)
+![](images/prediction.png.png)
 
 ## Misclassified Images
 Here is the sample result of model miss-classified images
 
-![](Module 3 (Final Results)/Best_with_reduced_param/images/missclassified.png.png)
+![](images/missclassified.png.png)
 
 ## Accuracy Report for Each class   
 
@@ -241,5 +241,5 @@ Here is the sample result of model miss-classified images
     Accuracy of 8 - eight : 100 %
     Accuracy of 9 - nine : 100 %
     
-![](Module 3 (Final Results)/Best_with_reduced_param/images/accuracy_per_class.png.png)
+![](images/accuracy_per_class.png.png)
 
