@@ -3,7 +3,7 @@
 - [File Structure](#File-Structure)
 - [Folder Structure](#Folder-Structure)
 - [Model Parameters](#Model-Parameters)
-- [RF and output shape Calculations For Network](#RF-and-output-shape-Calculations-For-Network)
+- [Receptive Field and Output Shape Calculation of Best Model](#Receptive-Field-and-Output-Shape-Calculation-of-Best-Model)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Sample Output](#Sample-Output)
