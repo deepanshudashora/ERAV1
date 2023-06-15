@@ -216,17 +216,24 @@ Model Comparision
 ## Accuracy Plot
 Here is the Accuracy and Loss metric plot for the model 
 
-![](images/accuracy_plot.png.png)
+<p align="center">
+    <img src="images/accuracy_plot.png" alt="centered image" />
+</p>
 
 ## Sample Output
 Here is the sample result of model classification 
 
-![](images/prediction.png.png)
+
+<p align="center">
+    <img src="images/prediction.png" alt="centered image" />
+</p>
 
 ## Misclassified Images
 Here is the sample result of model miss-classified images
 
-![](images/missclassified.png.png)
+<p align="center">
+    <img src="images/missclassified.png" alt="centered image" />
+</p>
 
 ## Accuracy Report for Each class   
 
@@ -241,5 +248,6 @@ Here is the sample result of model miss-classified images
     Accuracy of 8 - eight : 100 %
     Accuracy of 9 - nine : 100 %
     
-![](images/accuracy_per_class.png.png)
-
+<p align="center">
+    <img src="images/accuracy_per_class.png" alt="centered image" />
+</p>
