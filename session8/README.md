@@ -2,8 +2,10 @@
 
 - [Problem Statement](#Problem-Statement)
 - [File Structure](#File-Structure)
+- [Findings on Normalization](#Findings-on-Normalization)
+- [Normalization Maths](#Normalization-Maths)
+- [Applied Augmentation](#Applied-Augmentation)
 - [Model Parameters](#Model-Parameters)
-- [Receptive Field and Output Shape Calculation of Layers](#Receptive-Field-and-Output-Shape-Calculation-of-Layers)
 - [Results](#Results)
   * [Accuracy Plot](#Accuracy-Plot)
   * [Sample Output](#Sample-Output)
@@ -51,7 +53,7 @@
 </p>
 
 
-# Augmentation Details 
+# Applied Augmentation
 
 <p align="center">
     <img src="images/aug_sample.png" alt="centered image" />
