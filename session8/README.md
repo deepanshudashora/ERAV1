@@ -7,10 +7,10 @@
 - [Applied Augmentation](#Applied-Augmentation)
 - [Model Parameters](#Model-Parameters)
 - [Results](#Results)
-  * [Accuracy Plot](#Accuracy-Plot)
-  * [Sample Output](#Sample-Output)
+  * [Accuracy Plots](#Accuracy-Plots)
   * [Misclassified Images](#Misclassified-Images)
   * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class)
+- [Other Experiments](#Other-Experiments)
 
 # Problem Statement
 
@@ -118,6 +118,6 @@
 | ship       | 79                         | 78                         | 85                         |
 | truck      | 80                         | 85                         | 75                         |
 
-# Other Eperiments
+# Other Experiments
 
 Please checkout other experiments with model parameters [42000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/42000), [29000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/29000), [27000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/27000), [21000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/21000)
