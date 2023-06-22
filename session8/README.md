@@ -16,8 +16,8 @@
 
 ### Training CNN for CIFAR Dataset
 
-1. keep the parameter cound less than 50,000
-2. Use Batch-Norm, Layer-Norm and Goup-Norm and create post the results
+1. keep the parameter count less than 50,000
+2. Use Batch-Norm, Layer-Norm, and Group-Norm and create post the results
 3. Max Epochs is 20
 
 # File Structure
@@ -32,21 +32,23 @@
     * train.py -> contains training loop
     * uitls.py -> contains functions for plotting and extra supportive functions for code
 * S8_BN.ipynb
-  * contains execution of code with batch-normalization
+  * contains the execution of code with batch-normalization
 * S8_LN.ipynb
-  * contains execution of code with layer-normalization
+  * contains the execution of code with layer-normalization
 * S8_GN.ipynb
-  * contains execution of code with group-normalization
+  * contains the execution of code with group-normalization
 
 # Findings on Normalization
 
 |      Normalization type      |                          Overall Working                          |                                                                                                           Observations during experiment                                                                                                           |  |
 | :---------------------------: | :----------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-: |
-| **Group Normalization** |         Takes Group of channels and normalizes each group        | Group size plays an important role here, first of all, we can not define a group size which is not divisible by our channel size, also an optimal group size is required, the experiment was done on both 4 and 2 group size 2 seems to be better in results and also does not differ the model architecture with other two normalizations |  |
-| **Layer Normalization** |          Normalizes all the activation of single layers.          |                                     This is slightly tricky, we need to use group normalization with group size of 1 to call it layer normalization, it is slightly better than group normalization in terms of running and accuracy at least for this experiment                                     |  |
-| **Batch Normalization** | Normalizes the layers input rescaling and re-centering the images. |                                                                                                 No questions, it is the best, dropout values plays a important role here                                                                                               |  |
+| **Group Normalization** |         Takes Group of channels and normalizes each group        | Group size plays an important role here, first of all, we can not define a group size that is not divisible by our channel size, also an optimal group size is required, the experiment was done on both 4 and 2 group size 2 seems to be better in results and also does not differ the model architecture with other two normalizations |  |
+| **Layer Normalization** |          Normalizes all the activation of single layers.          |                                     This is slightly tricky, we need to use group normalization with a group size of 1 to call it layer normalization, it is slightly better than group normalization in terms of running and accuracy at least for this experiment                                     |  |
+| **Batch Normalization** | Normalizes the layers input rescaling and re-centering the images. |                                                                                                 No questions, it is the best, dropout values play an important role here                                                                                               |  |
 
 # Normalization Maths
+
+[Checkout Excel file for details and experiments](https://github.com/deepanshudashora/ERAV1/blob/master/session8/other_experiments/Normalizations.xlsx)
 
 <p align="center">
     <img src="images/normalization_types.png" alt="centered image" />
@@ -60,7 +62,7 @@
 </p>
 
 
-# Model Parameters
+# [Model Parameters](https://github.com/deepanshudashora/ERAV1/blob/master/session8/src/model.py)
 
     Total params: 19,702
     Trainable params: 19,702
@@ -70,9 +72,9 @@
 
 | Normalization Type  | Parameters | Best Training Accuracy | Best Testing Accuracy |
 | ------------------- | ---------- | ---------------------- | --------------------- |
-| Batch Normalization | 19,702     | 60.94%                 | 72.73%                |
-| Layer Normalization | 19,702     | 60.22%                 | 70.96%                |
-| Group Normalization | 19,702     | 60.09%                 | 71.00%                |
+| [Batch Normalization](https://github.com/deepanshudashora/ERAV1/blob/master/session8/S8_BN.ipynb) | 19,702     | 60.94%                 | 72.73%                |
+| [Layer Normalization](https://github.com/deepanshudashora/ERAV1/blob/master/session8/S8_LN.ipynb) | 19,702     | 60.22%                 | 70.96%                |
+| [Group Normalization](https://github.com/deepanshudashora/ERAV1/blob/master/session8/S8_GN.ipynb) | 19,702     | 60.09%                 | 71.00%                |
 
 # Results
 
