@@ -104,3 +104,183 @@ class Net(nn.Module):
         x = x.view(-1, 10) 
         
         return F.log_softmax(x, dim=-1)
+    
+class Session7Best(nn.Module):
+    def __init__(self):
+        super(Session7Best, self).__init__()
+        # Input Block
+        drop = 0.0
+        self.convblock1 = nn.Sequential(
+            nn.Conv2d(1, 4, (3, 3), padding=0, bias=False),
+            nn.ReLU(),
+            nn.BatchNorm2d(4),
+            nn.Dropout(drop),
+            nn.Conv2d(4, 10, (3, 3), padding=0, bias=False),
+            nn.ReLU(),
+            nn.BatchNorm2d(10),
+            nn.Dropout(drop)
+        ) 
+        self.pool1 = nn.MaxPool2d(2, 2)
+
+        # TRANSITION BLOCK 1
+        self.trans1 = nn.Sequential(
+            nn.Conv2d(10, 8, (1, 1), padding=0, bias=False),
+            nn.ReLU(),
+            nn.BatchNorm2d(8),
+            nn.Dropout(drop),
+            nn.Conv2d(8, 4, (1, 1), padding=0, bias=False),
+            nn.ReLU(),
+            nn.BatchNorm2d(4),
+            nn.Dropout(drop)
+        ) 
+
+        # CONVOLUTION BLOCK 1
+        self.convblock2 = nn.Sequential(
+            nn.Conv2d(4, 10, (3, 3), padding=0, bias=False),  
+            nn.ReLU(),
+            nn.BatchNorm2d(10),
+            nn.Dropout(drop),
+            nn.Conv2d(10, 16, (3, 3), padding=0, bias=False),  
+            nn.ReLU(),
+            nn.BatchNorm2d(16),
+            nn.Dropout(drop)
+        ) 
+
+        # CONVOLUTION BLOCK 2
+        self.convblock3 = nn.Sequential(
+            nn.Conv2d(16, 12, (3, 3), padding=0, bias=False), 
+            nn.ReLU(),
+            nn.BatchNorm2d(12),
+            nn.Dropout(drop),
+            nn.Conv2d(12, 16, (3, 3), padding=0, bias=False), 
+            nn.ReLU(),
+            nn.BatchNorm2d(16),
+            nn.Dropout(drop)
+        ) 
+
+        # Global average pooling
+        self.gap = nn.Sequential(
+            nn.AvgPool2d(4) 
+        )
+
+        # Fully connected layer
+        self.convblock5 = nn.Sequential(
+            nn.Conv2d(16, 10, (1, 1), padding=0, bias=False),  
+        )
+
+    def forward(self, x):
+        x = self.convblock1(x)
+        x = self.pool1(x)
+        x = self.trans1(x)
+        x = self.convblock2(x)
+        x = self.convblock3(x)
+        x = self.gap(x)
+        x = self.convblock5(x)
+        x = x.view(-1, 10) 
+        
+        return F.log_softmax(x, dim=-1)
+    
+class Session6(nn.Module):
+    def __init__(self):
+        super(Session6, self).__init__()
+        drop = 0.025  # droput value
+        # Input Block
+        self.convblock1 = nn.Sequential(
+            nn.Conv2d(1, 4, (3, 3), padding=0, bias=False),
+            nn.BatchNorm2d(4),
+            nn.ReLU(),
+            nn.Dropout(drop),
+            nn.Conv2d(4, 8, (3, 3), padding=0, bias=False),
+            nn.BatchNorm2d(8),
+            nn.ReLU(),
+            nn.Dropout(drop)
+        ) 
+
+        # CONVOLUTION BLOCK 1
+        self.convblock2 = nn.Sequential(
+            nn.Conv2d(8, 12, (3, 3), padding=0, bias=False),  
+            nn.BatchNorm2d(12),
+            nn.ReLU(),
+            nn.Dropout(drop),
+            nn.Conv2d(12, 16, (3, 3), padding=0, bias=False),  
+            nn.BatchNorm2d(16),
+            nn.ReLU(),
+            nn.Dropout(drop)
+        ) 
+
+        self.pool1 = nn.MaxPool2d(2, 2) 
+
+        # TRANSITION BLOCK 1
+        self.trans1 = nn.Sequential(
+            nn.Conv2d(16, 12, (1, 1), padding=0, bias=False),
+            nn.BatchNorm2d(12),
+            nn.ReLU(),
+            nn.Conv2d(12, 8, (1, 1), padding=0, bias=False),
+            nn.BatchNorm2d(8),
+            nn.ReLU()
+        ) 
+
+        # CONVOLUTION BLOCK 2
+        self.convblock3 = nn.Sequential(
+            nn.Conv2d(8, 12, (3, 3), padding=0, bias=False), 
+            nn.BatchNorm2d(12),
+            nn.ReLU(),
+            nn.Dropout(drop),
+            nn.Conv2d(12, 16, (3, 3), padding=0, bias=False), 
+            nn.BatchNorm2d(16),
+            nn.ReLU(),
+            nn.Dropout(drop),
+            nn.Conv2d(16, 20, (3, 3), padding=0, bias=False), 
+            nn.BatchNorm2d(20),
+            nn.ReLU()
+        ) 
+
+        self.trans2 = nn.Sequential(
+            nn.Conv2d(20, 16, (1, 1), padding=0, bias=False),
+            nn.BatchNorm2d(16),
+            nn.ReLU()
+        )
+
+        # Global average pooling
+        self.gap = nn.Sequential(
+            nn.AvgPool2d(4) 
+        )
+
+        # Fully connected layer
+        self.convblock5 = nn.Sequential(
+            nn.Conv2d(16, 10, (1, 1), padding=0, bias=False),  
+        )
+
+    def forward(self, x):
+        x = self.convblock1(x)
+        x = self.convblock2(x)
+        x = self.pool1(x)
+        x = self.trans1(x)
+        x = self.convblock3(x)
+        x = self.trans2(x) 
+        x = self.gap(x)
+        x = self.convblock5(x)
+        x = x.view(-1, 10) 
+        
+        return F.log_softmax(x, dim=-1)
+    
+class Session5(nn.Module):
+    #This defines the structure of the NN.
+    def __init__(self):
+        super(Session5, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=3)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3)
+        self.conv3 = nn.Conv2d(64, 128, kernel_size=3)
+        self.conv4 = nn.Conv2d(128, 256, kernel_size=3)
+        self.fc1 = nn.Linear(4096, 50)
+        self.fc2 = nn.Linear(50, 10)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x), 2)
+        x = F.relu(F.max_pool2d(self.conv2(x), 2)) 
+        x = F.relu(self.conv3(x), 2)
+        x = F.relu(F.max_pool2d(self.conv4(x), 2)) 
+        x = x.view(-1, 4096)
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+        return F.log_softmax(x, dim=1)
