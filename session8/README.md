@@ -118,4 +118,4 @@
 
 # Other Eperiments
 
-Please checkout other experiments with model parameters 42000, 29000, 27000, 21000
+Please checkout other experiments with model parameters [42000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/42000), [29000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/29000), [27000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/27000), [21000](https://github.com/deepanshudashora/ERAV1/tree/master/session8/other_experiments/21000)
