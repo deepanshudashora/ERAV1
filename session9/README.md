@@ -8,7 +8,7 @@
 - [Training Logs](#Training-Logs)
 - [Results](#Results)
   * [Accuracy](#Accuracy)
-  * [Accuracy Plots](#Accuracy-Plots)
+  * [Accuracy Plot](#Accuracy-Plot)
   * [Misclassified Images](#Misclassified-Images)
   * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class)
 
