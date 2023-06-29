@@ -42,7 +42,7 @@
 
 # Model Parameters
 
-The Model Uses **Dilated Convolution and Depthwise Separable Convolution** in between layers 
+The Model Uses [**Dilated Convolution and Depthwise Separable Convolution**](https://github.com/deepanshudashora/ERAV1/blob/master/session9/src/model.py) in between layers 
 
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
