@@ -101,14 +101,14 @@
         AvgPool2d-54             [-1, 20, 1, 1]               0
            Conv2d-55             [-1, 10, 1, 1]             200
 ----------------------------------------------------------------
- Total params: 94,980
- Trainable params: 94,980
- Non-trainable params: 0
+ * Total params: 94,980
+ * Trainable params: 94,980
+ * Non-trainable params: 0
 ----------------------------------------------------------------
- Input size (MB): 0.01
- Forward/backward pass size (MB): 8.85
- Params size (MB): 0.36
- Estimated Total Size (MB): 9.22
+ * Input size (MB): 0.01
+ * Forward/backward pass size (MB): 8.85
+ * Params size (MB): 0.36
+ * Estimated Total Size (MB): 9.22
 ----------------------------------------------------------------
 
 # Receptive Field and Output Shape Calculation of Best Model
