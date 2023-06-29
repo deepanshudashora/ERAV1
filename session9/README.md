@@ -11,15 +11,15 @@
   * [Accuracy Plots](#Accuracy-Plots)
   * [Misclassified Images](#Misclassified-Images)
   * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class)
-- [Other Experiments](#Other-Experiments)
+
 
 # Problem Statement
 
 ### Training CNN for CIFAR Dataset
 
 1. keep the parameter count less than 200,000
-2. Use Dialated Convolution and depth wise convolution
-3. Get atleast 85% accuracy
+2. Use Dilated Convolution and depth-wise convolution
+3. Get at least 85% accuracy
 
 # File Structure
 
@@ -44,7 +44,7 @@
 
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
-================================================================
+----------------------------------------------------------------
             Conv2d-1           [-1, 32, 32, 32]             864
               ReLU-2           [-1, 32, 32, 32]               0
        BatchNorm2d-3           [-1, 32, 32, 32]              64
@@ -100,15 +100,15 @@
           Dropout-53           [-1, 20, 15, 15]               0
         AvgPool2d-54             [-1, 20, 1, 1]               0
            Conv2d-55             [-1, 10, 1, 1]             200
-================================================================
-Total params: 94,980
-Trainable params: 94,980
-Non-trainable params: 0
 ----------------------------------------------------------------
-Input size (MB): 0.01
-Forward/backward pass size (MB): 8.85
-Params size (MB): 0.36
-Estimated Total Size (MB): 9.22
+ Total params: 94,980
+ Trainable params: 94,980
+ Non-trainable params: 0
+----------------------------------------------------------------
+ Input size (MB): 0.01
+ Forward/backward pass size (MB): 8.85
+ Params size (MB): 0.36
+ Estimated Total Size (MB): 9.22
 ----------------------------------------------------------------
 
 # Receptive Field and Output Shape Calculation of Best Model
@@ -137,61 +137,61 @@ Estimated Total Size (MB): 9.22
 
 # Training Logs
 
-  Epoch 140
-  Train: Loss=0.4791 Batch_id=1562 Accuracy=75.68: 100%|██████████| 1563/1563 [00:47<00:00, 33.05it/s]
-  Test set: Average loss: 0.4298, Accuracy: 8547/10000 (85.47%)
-
-  Adjusting learning rate of group 0 to 6.8016e-04.
-  Epoch 141
-  Train: Loss=0.7377 Batch_id=1562 Accuracy=75.45: 100%|██████████| 1563/1563 [00:44<00:00, 34.95it/s]
-  Test set: Average loss: 0.4389, Accuracy: 8493/10000 (84.93%)
-
-  Adjusting learning rate of group 0 to 6.8016e-04.
-  Epoch 142
-  Train: Loss=0.7668 Batch_id=1562 Accuracy=75.43: 100%|██████████| 1563/1563 [00:46<00:00, 33.61it/s]
-  Test set: Average loss: 0.4325, Accuracy: 8545/10000 (85.45%)
-
-  Adjusting learning rate of group 0 to 6.8016e-04.
-  Epoch 143
-  Train: Loss=1.0136 Batch_id=1562 Accuracy=75.67: 100%|██████████| 1563/1563 [00:44<00:00, 35.20it/s]
-  Test set: Average loss: 0.4432, Accuracy: 8479/10000 (84.79%)
-
-  Adjusting learning rate of group 0 to 6.8017e-04.
-  Epoch 144
-  Train: Loss=0.7691 Batch_id=1562 Accuracy=75.60: 100%|██████████| 1563/1563 [00:44<00:00, 35.02it/s]
-  Test set: Average loss: 0.4346, Accuracy: 8519/10000 (85.19%)
-
-  Adjusting learning rate of group 0 to 6.8017e-04.
-  Epoch 145
-  Train: Loss=0.9349 Batch_id=1562 Accuracy=75.62: 100%|██████████| 1563/1563 [00:44<00:00, 35.27it/s]
-  Test set: Average loss: 0.4180, Accuracy: 8572/10000 (85.72%)
-
-  Adjusting learning rate of group 0 to 6.8017e-04.
-  Epoch 146
-  Train: Loss=0.9429 Batch_id=1562 Accuracy=75.72: 100%|██████████| 1563/1563 [00:43<00:00, 35.80it/s]
-  Test set: Average loss: 0.4320, Accuracy: 8508/10000 (85.08%)
-
-  Adjusting learning rate of group 0 to 6.8017e-04.
-  Epoch 147
-  Train: Loss=0.7318 Batch_id=1562 Accuracy=75.55: 100%|██████████| 1563/1563 [00:47<00:00, 33.19it/s]
-  Test set: Average loss: 0.4284, Accuracy: 8555/10000 (85.55%)
-
-  Adjusting learning rate of group 0 to 6.8018e-04.
-  Epoch 148
-  Train: Loss=0.5375 Batch_id=1562 Accuracy=75.54: 100%|██████████| 1563/1563 [00:43<00:00, 35.72it/s]
-  Test set: Average loss: 0.4410, Accuracy: 8486/10000 (84.86%)
-
-  Adjusting learning rate of group 0 to 6.8018e-04.
-  Epoch 149
-  Train: Loss=1.0320 Batch_id=1562 Accuracy=75.82: 100%|██████████| 1563/1563 [00:45<00:00, 34.70it/s]
-  Test set: Average loss: 0.4357, Accuracy: 8514/10000 (85.14%)
-
-  Adjusting learning rate of group 0 to 6.8018e-04.
-  Epoch 150
-  Train: Loss=0.4159 Batch_id=1562 Accuracy=75.86: 100%|██████████| 1563/1563 [00:44<00:00, 35.43it/s]
-  Test set: Average loss: 0.4274, Accuracy: 8530/10000 (85.30%)
-
-  Adjusting learning rate of group 0 to 6.8018e-04.
+   Epoch 140
+   Train: Loss=0.4791 Batch_id=1562 Accuracy=75.68: 100%|██████████| 1563/1563 [00:47<00:00, 33.05it/s]
+   Test set: Average loss: 0.4298, Accuracy: 8547/10000 (85.47%)
+ 
+   Adjusting learning rate of group 0 to 6.8016e-04.
+   Epoch 141
+   Train: Loss=0.7377 Batch_id=1562 Accuracy=75.45: 100%|██████████| 1563/1563 [00:44<00:00, 34.95it/s]
+   Test set: Average loss: 0.4389, Accuracy: 8493/10000 (84.93%)
+ 
+   Adjusting learning rate of group 0 to 6.8016e-04.
+   Epoch 142
+   Train: Loss=0.7668 Batch_id=1562 Accuracy=75.43: 100%|██████████| 1563/1563 [00:46<00:00, 33.61it/s]
+   Test set: Average loss: 0.4325, Accuracy: 8545/10000 (85.45%)
+ 
+   Adjusting learning rate of group 0 to 6.8016e-04.
+   Epoch 143
+   Train: Loss=1.0136 Batch_id=1562 Accuracy=75.67: 100%|██████████| 1563/1563 [00:44<00:00, 35.20it/s]
+   Test set: Average loss: 0.4432, Accuracy: 8479/10000 (84.79%)
+ 
+   Adjusting learning rate of group 0 to 6.8017e-04.
+   Epoch 144
+   Train: Loss=0.7691 Batch_id=1562 Accuracy=75.60: 100%|██████████| 1563/1563 [00:44<00:00, 35.02it/s]
+   Test set: Average loss: 0.4346, Accuracy: 8519/10000 (85.19%)
+ 
+   Adjusting learning rate of group 0 to 6.8017e-04.
+   Epoch 145
+   Train: Loss=0.9349 Batch_id=1562 Accuracy=75.62: 100%|██████████| 1563/1563 [00:44<00:00, 35.27it/s]
+   Test set: Average loss: 0.4180, Accuracy: 8572/10000 (85.72%)
+ 
+   Adjusting learning rate of group 0 to 6.8017e-04.
+   Epoch 146
+   Train: Loss=0.9429 Batch_id=1562 Accuracy=75.72: 100%|██████████| 1563/1563 [00:43<00:00, 35.80it/s]
+   Test set: Average loss: 0.4320, Accuracy: 8508/10000 (85.08%)
+ 
+   Adjusting learning rate of group 0 to 6.8017e-04.
+   Epoch 147
+   Train: Loss=0.7318 Batch_id=1562 Accuracy=75.55: 100%|██████████| 1563/1563 [00:47<00:00, 33.19it/s]
+   Test set: Average loss: 0.4284, Accuracy: 8555/10000 (85.55%)
+ 
+   Adjusting learning rate of group 0 to 6.8018e-04.
+   Epoch 148
+   Train: Loss=0.5375 Batch_id=1562 Accuracy=75.54: 100%|██████████| 1563/1563 [00:43<00:00, 35.72it/s]
+   Test set: Average loss: 0.4410, Accuracy: 8486/10000 (84.86%)
+ 
+   Adjusting learning rate of group 0 to 6.8018e-04.
+   Epoch 149
+   Train: Loss=1.0320 Batch_id=1562 Accuracy=75.82: 100%|██████████| 1563/1563 [00:45<00:00, 34.70it/s]
+   Test set: Average loss: 0.4357, Accuracy: 8514/10000 (85.14%)
+ 
+   Adjusting learning rate of group 0 to 6.8018e-04.
+   Epoch 150
+   Train: Loss=0.4159 Batch_id=1562 Accuracy=75.86: 100%|██████████| 1563/1563 [00:44<00:00, 35.43it/s]
+   Test set: Average loss: 0.4274, Accuracy: 8530/10000 (85.30%)
+ 
+   Adjusting learning rate of group 0 to 6.8018e-04.
 
 # Results
 
