@@ -42,6 +42,8 @@
 
 # Model Parameters
 
+The Model Uses **Dilated Convolution and Depthwise Separable Convolution** in between layers 
+
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ----------------------------------------------------------------
