@@ -65,7 +65,9 @@ class Net(nn.Module):
             nn.ReLU(),
             apply_normalization(32),
             nn.Dropout(drop),
+         )
 
+        self.convblock4 = nn.Sequential(
             nn.Conv2d(in_channels=32, out_channels=32, kernel_size=(3, 3), padding=1, stride=1, groups=32, bias=False), #49
             #pointwise
             nn.Conv2d(in_channels=32, out_channels=30, padding=1,kernel_size=(1,1)), #49
@@ -89,18 +91,18 @@ class Net(nn.Module):
         )
 
         # Fully connected layer
-        self.convblock4 = nn.Sequential(
+        self.final = nn.Sequential(
             nn.Conv2d(20, 10, (1, 1), padding=0, bias=False),
         )
 
     def forward(self, x):
         x = self.convblock1(x)
         x = self.convblock2(x)
-        #x = self.trans2(x)
         x = self.diated(x)
         x = self.convblock3(x)
-        x = self.gap(x)
         x = self.convblock4(x)
+        x = self.gap(x)
+        x = self.final(x)
         x = x.view(-1, 10)
 
         return F.log_softmax(x, dim=-1)
