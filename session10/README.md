@@ -20,7 +20,6 @@
 * [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session10/experiments) -> Contains other experiments before dividing the final model and accuracy  
 
 # Problem Statement
-### Training CNN for MNIST dataset
 1. Train CNN on cifar dataset with residual blocks
 2. Target accuracy -> 90% on the test set 
 3. Use torch_lr_finder for finding LR
