@@ -10,7 +10,7 @@
     * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class )
 
 # File Structure
-* Beluga -> A Repository contains files for training 
+* [Beluga](https://github.com/deepanshudashora/Beluga/tree/main) -> A Repository contains files for training 
     * model.py -> For importing model architecture
     * train.py -> Contains training loop 
     * test.py -> Contains code for running model on test set 
