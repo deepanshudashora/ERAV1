@@ -11,25 +11,25 @@
 
 # File Structure
 * [Beluga](https://github.com/deepanshudashora/Beluga/tree/main) -> A Repository contains files for training 
-    * model.py -> For importing model architecture
-    * train.py -> Contains training loop 
-    * test.py -> Contains code for running model on test set 
-    * utils.py -> Contains supportive functions
+    * [model.py](https://github.com/deepanshudashora/Beluga/blob/main/model.py) -> For importing model architecture
+    * [train.py](https://github.com/deepanshudashora/Beluga/blob/main/train.py) -> Contains training loop 
+    * [test.py](https://github.com/deepanshudashora/Beluga/blob/main/test.py) -> Contains code for running model on the test set 
+    * [utils.py](https://github.com/deepanshudashora/Beluga/blob/main/utils.py) -> Contains supportive functions
 
-* S10.ipynb -> Notebook Contains model training
-* Experiments -> Contains other experiments before deviding the final model and accuracy  
+* [S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb) -> Notebook Contains model training
+* [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session10/experiments) -> Contains other experiments before dividing the final model and accuracy  
 
 # Problem Statement
 ### Training CNN for MNIST dataset
 1. Train CNN on cifar dataset with residual blocks
-2. Target accuracy -> 90% on test set 
+2. Target accuracy -> 90% on the test set 
 3. Use torch_lr_finder for finding LR
 4. User OneCycleLR as Lr scheduler
 
 
 # LR Finding 
 
-For finding the Optimal learning rate torch_lr_finder module is used
+For finding the Optimal learning rate [torch_lr_finder](https://github.com/davidtvs/pytorch-lr-finder) module is used
 
 ```
 from torch_lr_finder import LRFinder
@@ -98,8 +98,8 @@ For gettting best out of it, model is trained on very high LR till 5th epoch and
 
 |Model Experiments|Found LR|Best Validation accuracy| Best Training Accuray |
 |--|--|--|--|
-|experiments/S10.ipynb|2.47E-02|91.73%|96.89%|
-|S10.ipynb|1.73E-02|91.97%|98.16%|
+|[experiments/S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_.ipynb)|2.47E-02|91.73%|96.89%|
+|[S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb)|1.73E-02|91.97%|98.16%|
 
 
 
