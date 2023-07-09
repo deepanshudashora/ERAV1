@@ -31,7 +31,7 @@
 
 For finding the Optimal learning rate torch_lr_finder module is used
 
-``````
+```
 from torch_lr_finder import LRFinder
 model = CustomResnet().to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.01, weight_decay=1e-4)
@@ -40,7 +40,7 @@ lr_finder = LRFinder(model, optimizer, criterion, device="cuda")
 lr_finder.range_test(train_loader, end_lr=10, num_iter=200, step_mode="exp")
 lr_finder.plot() # to inspect the loss-learning rate graph
 lr_finder.reset() # to reset the model and optimizer to their initial state
-``````
+```
 
 LR suggestion: steepest gradient
 Suggested LR: 2.47E-02
