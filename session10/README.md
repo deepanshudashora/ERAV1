@@ -10,11 +10,11 @@
     * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class )
 
 # File Structure
-* [Beluga](https://github.com/deepanshudashora/Beluga/tree/main) -> A Repository contains files for training 
-    * [model.py](https://github.com/deepanshudashora/Beluga/blob/main/model.py) -> For importing model architecture
-    * [train.py](https://github.com/deepanshudashora/Beluga/blob/main/train.py) -> Contains training loop 
-    * [test.py](https://github.com/deepanshudashora/Beluga/blob/main/test.py) -> Contains code for running model on the test set 
-    * [utils.py](https://github.com/deepanshudashora/Beluga/blob/main/utils.py) -> Contains supportive functions
+* [custom_models](https://github.com/deepanshudashora/custom_models) -> A Repository contains files for training 
+    * [custom_resnet.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> For importing model architecture
+    * [train.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> Contains training loop 
+    * [test.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> Contains code for running model on the test set 
+    * [utils.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> Contains supportive functions
 
 * [S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb) -> Notebook Contains model training
 * [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session10/experiments) -> Contains other experiments before dividing the final model and accuracy  
@@ -105,8 +105,10 @@ Estimated Total Size (MB): 2414.99
 
 |Model Experiments|Found LR|Best Validation accuracy| Best Training Accuray |
 |--|--|--|--|
-|[experiments/S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_.ipynb)|2.47E-02|91.73%|96.89%|
-|[S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb)|1.73E-02|91.97%|98.16%|
+|[Exp-1](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb)|3.31E-02|90.91%|95.88%|
+|[Exp-2](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_96_91.ipynb)|2.63E-02|91.32%|96.95%|
+|[Exp-3](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_98_91.ipynb)|1.19E-02|91.72%|98.77%|
+|[S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb)|1.87E-02|91.80%|96.93%|
 
 
 
