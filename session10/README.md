@@ -1,6 +1,7 @@
 # Submission for Week 5
 - [File Structure](#File-Structure)
 - [Problem Statement](#Problem-Statement)
+- [LR Finding](#LR-Finding)
 - [Model Parameters](#Model-Parameters)
 - [Accuracy Report](#Accuracy-Report)
 - [Training Logs](#Training-Logs)
