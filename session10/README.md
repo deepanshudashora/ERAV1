@@ -13,9 +13,9 @@
 # File Structure
 * [custom_models](https://github.com/deepanshudashora/custom_models) -> A Repository contains files for training 
     * [custom_resnet.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> For importing model architecture
-    * [train.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> Contains training loop 
-    * [test.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> Contains code for running model on the test set 
-    * [utils.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> Contains supportive functions
+    * [train.py](https://github.com/deepanshudashora/custom_models/blob/main/train.py) -> Contains training loop 
+    * [test.py](https://github.com/deepanshudashora/custom_models/blob/main/test.py) -> Contains code for running model on the test set 
+    * [utils.py](https://github.com/deepanshudashora/custom_models/blob/main/utils.py) -> Contains supportive functions
 
 * [S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb) -> Notebook Contains model training
 * [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session10/experiments) -> Contains other experiments before dividing the final model and accuracy  
