@@ -105,7 +105,7 @@ Estimated Total Size (MB): 2414.99
 # Accuracy Report
 
 |Model Experiments|Found Max LR|Min LR|Best Validation accuracy| Best Training Accuray |
-|--|--|--|--|
+|--|--|--|--|--|
 |[Exp-1](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb)|3.31E-02|0.023|90.91%|95.88%|
 |[Exp-2](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_96_91.ipynb)|2.63E-02|0.02|91.32%|96.95%|
 |[Exp-3](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_98_91.ipynb)|1.19E-02|0.01|91.72%|98.77%|
