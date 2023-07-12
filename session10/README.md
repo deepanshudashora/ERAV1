@@ -49,48 +49,56 @@ For gettting best out of it, model is trained on very high LR till 5th epoch and
 # Model Parameters
 
 ``````
-----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-----------------------------------------------------------------
-            Conv2d-1           [-1, 64, 32, 32]           1,728
-       BatchNorm2d-2           [-1, 64, 32, 32]             128
-              ReLU-3           [-1, 64, 32, 32]               0
-            Conv2d-4          [-1, 128, 32, 32]          73,728
-         MaxPool2d-5          [-1, 128, 16, 16]               0
-       BatchNorm2d-6          [-1, 128, 16, 16]             256
-              ReLU-7          [-1, 128, 16, 16]               0
-            Conv2d-8          [-1, 128, 16, 16]         147,456
-       BatchNorm2d-9          [-1, 128, 16, 16]             256
-             ReLU-10          [-1, 128, 16, 16]               0
-           Conv2d-11          [-1, 128, 16, 16]         147,456
-      BatchNorm2d-12          [-1, 128, 16, 16]             256
-             ReLU-13          [-1, 128, 16, 16]               0
-           Conv2d-14          [-1, 256, 16, 16]         294,912
-        MaxPool2d-15            [-1, 256, 8, 8]               0
-      BatchNorm2d-16            [-1, 256, 8, 8]             512
-             ReLU-17            [-1, 256, 8, 8]               0
-           Conv2d-18            [-1, 512, 8, 8]       1,179,648
-        MaxPool2d-19            [-1, 512, 4, 4]               0
-      BatchNorm2d-20            [-1, 512, 4, 4]           1,024
-             ReLU-21            [-1, 512, 4, 4]               0
-           Conv2d-22            [-1, 512, 4, 4]       2,359,296
-      BatchNorm2d-23            [-1, 512, 4, 4]           1,024
-             ReLU-24            [-1, 512, 4, 4]               0
-           Conv2d-25            [-1, 512, 4, 4]       2,359,296
-      BatchNorm2d-26            [-1, 512, 4, 4]           1,024
-             ReLU-27            [-1, 512, 4, 4]               0
-        MaxPool2d-28            [-1, 512, 1, 1]               0
-           Linear-29                   [-1, 10]           5,130
-----------------------------------------------------------------
-    Total params: 6,573,130
-    Trainable params: 6,573,130
-    Non-trainable params: 0
-----------------------------------------------------------------
-    Input size (MB): 0.01
-    Forward/backward pass size (MB): 6.44
-    Params size (MB): 25.07
-    Estimated Total Size (MB): 31.53
-----------------------------------------------------------------
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+CustomResnet                             [512, 10]                 --
+├─Sequential: 1-1                        [512, 64, 32, 32]         --
+│    └─Conv2d: 2-1                       [512, 64, 32, 32]         1,728
+│    └─BatchNorm2d: 2-2                  [512, 64, 32, 32]         128
+│    └─ReLU: 2-3                         [512, 64, 32, 32]         --
+├─Sequential: 1-2                        [512, 128, 16, 16]        --
+│    └─Conv2d: 2-4                       [512, 128, 32, 32]        73,728
+│    └─MaxPool2d: 2-5                    [512, 128, 16, 16]        --
+│    └─BatchNorm2d: 2-6                  [512, 128, 16, 16]        256
+│    └─ReLU: 2-7                         [512, 128, 16, 16]        --
+├─Sequential: 1-3                        [512, 128, 16, 16]        --
+│    └─Conv2d: 2-8                       [512, 128, 16, 16]        147,456
+│    └─BatchNorm2d: 2-9                  [512, 128, 16, 16]        256
+│    └─ReLU: 2-10                        [512, 128, 16, 16]        --
+│    └─Conv2d: 2-11                      [512, 128, 16, 16]        147,456
+│    └─BatchNorm2d: 2-12                 [512, 128, 16, 16]        256
+│    └─ReLU: 2-13                        [512, 128, 16, 16]        --
+├─Sequential: 1-4                        [512, 256, 8, 8]          --
+│    └─Conv2d: 2-14                      [512, 256, 16, 16]        294,912
+│    └─MaxPool2d: 2-15                   [512, 256, 8, 8]          --
+│    └─BatchNorm2d: 2-16                 [512, 256, 8, 8]          512
+│    └─ReLU: 2-17                        [512, 256, 8, 8]          --
+├─Sequential: 1-5                        [512, 512, 4, 4]          --
+│    └─Conv2d: 2-18                      [512, 512, 8, 8]          1,179,648
+│    └─MaxPool2d: 2-19                   [512, 512, 4, 4]          --
+│    └─BatchNorm2d: 2-20                 [512, 512, 4, 4]          1,024
+│    └─ReLU: 2-21                        [512, 512, 4, 4]          --
+├─Sequential: 1-6                        [512, 512, 4, 4]          --
+│    └─Conv2d: 2-22                      [512, 512, 4, 4]          2,359,296
+│    └─BatchNorm2d: 2-23                 [512, 512, 4, 4]          1,024
+│    └─ReLU: 2-24                        [512, 512, 4, 4]          --
+│    └─Conv2d: 2-25                      [512, 512, 4, 4]          2,359,296
+│    └─BatchNorm2d: 2-26                 [512, 512, 4, 4]          1,024
+│    └─ReLU: 2-27                        [512, 512, 4, 4]          --
+├─MaxPool2d: 1-7                         [512, 512, 1, 1]          --
+├─Linear: 1-8                            [512, 10]                 5,130
+==========================================================================================
+Total params: 6,573,130
+Trainable params: 6,573,130
+Non-trainable params: 0
+Total mult-adds (G): 194.18
+==========================================================================================
+Input size (MB): 6.29
+Forward/backward pass size (MB): 2382.41
+Params size (MB): 26.29
+Estimated Total Size (MB): 2414.99
+==========================================================================================
 ``````
 
 # Accuracy Report
@@ -106,100 +114,100 @@ For gettting best out of it, model is trained on very high LR till 5th epoch and
 
 ```
 Epoch 1
-Train: Loss=0.9495 Batch_id=97 Accuracy=51.13: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
-Test set: Average loss: 0.0340, Accuracy: 5980/10000 (59.80%)
+Train: Loss=0.9490 Batch_id=97 Accuracy=50.59: 100%|██████████| 98/98 [00:53<00:00,  1.85it/s]
+Test set: Average loss: 0.0386, Accuracy: 5172/10000 (51.72%)
 
 Epoch 2
-Train: Loss=0.8421 Batch_id=97 Accuracy=67.68: 100%|██████████| 98/98 [00:53<00:00,  1.84it/s]
-Test set: Average loss: 0.0289, Accuracy: 7077/10000 (70.77%)
+Train: Loss=0.7590 Batch_id=97 Accuracy=66.25: 100%|██████████| 98/98 [00:53<00:00,  1.85it/s]
+Test set: Average loss: 0.0235, Accuracy: 6931/10000 (69.31%)
 
 Epoch 3
-Train: Loss=0.7909 Batch_id=97 Accuracy=72.99: 100%|██████████| 98/98 [00:53<00:00,  1.85it/s]
-Test set: Average loss: 0.0282, Accuracy: 7253/10000 (72.53%)
+Train: Loss=0.9701 Batch_id=97 Accuracy=72.90: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0285, Accuracy: 6754/10000 (67.54%)
 
 Epoch 4
-Train: Loss=0.6936 Batch_id=97 Accuracy=76.22: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0280, Accuracy: 7105/10000 (71.05%)
+Train: Loss=0.7411 Batch_id=97 Accuracy=75.39: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
+Test set: Average loss: 0.0205, Accuracy: 7604/10000 (76.04%)
 
 Epoch 5
-Train: Loss=0.6491 Batch_id=97 Accuracy=77.76: 100%|██████████| 98/98 [00:53<00:00,  1.84it/s]
-Test set: Average loss: 0.0407, Accuracy: 5963/10000 (59.63%)
+Train: Loss=0.6207 Batch_id=97 Accuracy=77.68: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
+Test set: Average loss: 0.0212, Accuracy: 7247/10000 (72.47%)
 
 Epoch 6
-Train: Loss=0.5590 Batch_id=97 Accuracy=80.85: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0196, Accuracy: 7761/10000 (77.61%)
+Train: Loss=0.5695 Batch_id=97 Accuracy=79.17: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
+Test set: Average loss: 0.0181, Accuracy: 7902/10000 (79.02%)
 
 Epoch 7
-Train: Loss=0.4207 Batch_id=97 Accuracy=82.98: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0205, Accuracy: 7748/10000 (77.48%)
+Train: Loss=0.6019 Batch_id=97 Accuracy=80.96: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
+Test set: Average loss: 0.0125, Accuracy: 8119/10000 (81.19%)
 
 Epoch 8
-Train: Loss=0.4243 Batch_id=97 Accuracy=84.13: 100%|██████████| 98/98 [00:52<00:00,  1.87it/s]
-Test set: Average loss: 0.0192, Accuracy: 8062/10000 (80.62%)
+Train: Loss=0.5925 Batch_id=97 Accuracy=81.60: 100%|██████████| 98/98 [00:53<00:00,  1.84it/s]
+Test set: Average loss: 0.0185, Accuracy: 7628/10000 (76.28%)
 
 Epoch 9
-Train: Loss=0.4336 Batch_id=97 Accuracy=84.87: 100%|██████████| 98/98 [00:52<00:00,  1.87it/s]
-Test set: Average loss: 0.0212, Accuracy: 7728/10000 (77.28%)
+Train: Loss=0.5473 Batch_id=97 Accuracy=82.24: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0121, Accuracy: 8160/10000 (81.60%)
 
 Epoch 10
-Train: Loss=0.3729 Batch_id=97 Accuracy=85.51: 100%|██████████| 98/98 [00:53<00:00,  1.85it/s]
-Test set: Average loss: 0.0217, Accuracy: 7766/10000 (77.66%)
+Train: Loss=0.4864 Batch_id=97 Accuracy=83.27: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0177, Accuracy: 8023/10000 (80.23%)
 
 Epoch 11
-Train: Loss=0.4247 Batch_id=97 Accuracy=86.58: 100%|██████████| 98/98 [00:52<00:00,  1.85it/s]
-Test set: Average loss: 0.0201, Accuracy: 7975/10000 (79.75%)
+Train: Loss=0.4858 Batch_id=97 Accuracy=83.58: 100%|██████████| 98/98 [00:53<00:00,  1.84it/s]
+Test set: Average loss: 0.0173, Accuracy: 7972/10000 (79.72%)
 
 Epoch 12
-Train: Loss=0.3482 Batch_id=97 Accuracy=87.06: 100%|██████████| 98/98 [00:52<00:00,  1.85it/s]
-Test set: Average loss: 0.0123, Accuracy: 8398/10000 (83.98%)
+Train: Loss=0.6261 Batch_id=97 Accuracy=84.31: 100%|██████████| 98/98 [00:54<00:00,  1.81it/s]
+Test set: Average loss: 0.0144, Accuracy: 8339/10000 (83.39%)
 
 Epoch 13
-Train: Loss=0.4099 Batch_id=97 Accuracy=88.03: 100%|██████████| 98/98 [00:52<00:00,  1.87it/s]
-Test set: Average loss: 0.0120, Accuracy: 8608/10000 (86.08%)
+Train: Loss=0.4370 Batch_id=97 Accuracy=84.85: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0153, Accuracy: 8188/10000 (81.88%)
 
 Epoch 14
-Train: Loss=0.4361 Batch_id=97 Accuracy=88.12: 100%|██████████| 98/98 [00:52<00:00,  1.85it/s]
-Test set: Average loss: 0.0131, Accuracy: 8423/10000 (84.23%)
+Train: Loss=0.4110 Batch_id=97 Accuracy=85.23: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0155, Accuracy: 8204/10000 (82.04%)
 
 Epoch 15
-Train: Loss=0.3742 Batch_id=97 Accuracy=88.75: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0101, Accuracy: 8376/10000 (83.76%)
+Train: Loss=0.3817 Batch_id=97 Accuracy=85.99: 100%|██████████| 98/98 [00:53<00:00,  1.84it/s]
+Test set: Average loss: 0.0164, Accuracy: 8149/10000 (81.49%)
 
 Epoch 16
-Train: Loss=0.2820 Batch_id=97 Accuracy=89.74: 100%|██████████| 98/98 [00:52<00:00,  1.87it/s]
-Test set: Average loss: 0.0091, Accuracy: 8559/10000 (85.59%)
+Train: Loss=0.4587 Batch_id=97 Accuracy=86.68: 100%|██████████| 98/98 [00:53<00:00,  1.84it/s]
+Test set: Average loss: 0.0160, Accuracy: 8412/10000 (84.12%)
 
 Epoch 17
-Train: Loss=0.2570 Batch_id=97 Accuracy=90.55: 100%|██████████| 98/98 [00:52<00:00,  1.87it/s]
-Test set: Average loss: 0.0116, Accuracy: 8679/10000 (86.79%)
+Train: Loss=0.3425 Batch_id=97 Accuracy=87.71: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0121, Accuracy: 8561/10000 (85.61%)
 
 Epoch 18
-Train: Loss=0.2695 Batch_id=97 Accuracy=91.38: 100%|██████████| 98/98 [00:52<00:00,  1.85it/s]
-Test set: Average loss: 0.0079, Accuracy: 8656/10000 (86.56%)
+Train: Loss=0.3654 Batch_id=97 Accuracy=88.56: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
+Test set: Average loss: 0.0134, Accuracy: 8535/10000 (85.35%)
 
 Epoch 19
-Train: Loss=0.3383 Batch_id=97 Accuracy=92.23: 100%|██████████| 98/98 [00:52<00:00,  1.88it/s]
-Test set: Average loss: 0.0097, Accuracy: 8734/10000 (87.34%)
+Train: Loss=0.3320 Batch_id=97 Accuracy=89.39: 100%|██████████| 98/98 [00:54<00:00,  1.81it/s]
+Test set: Average loss: 0.0107, Accuracy: 8588/10000 (85.88%)
 
 Epoch 20
-Train: Loss=0.1746 Batch_id=97 Accuracy=93.03: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0093, Accuracy: 8796/10000 (87.96%)
+Train: Loss=0.1886 Batch_id=97 Accuracy=90.88: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0095, Accuracy: 8672/10000 (86.72%)
 
 Epoch 21
-Train: Loss=0.2099 Batch_id=97 Accuracy=94.61: 100%|██████████| 98/98 [00:51<00:00,  1.89it/s]
-Test set: Average loss: 0.0078, Accuracy: 9029/10000 (90.29%)
+Train: Loss=0.2095 Batch_id=97 Accuracy=91.76: 100%|██████████| 98/98 [00:53<00:00,  1.82it/s]
+Test set: Average loss: 0.0093, Accuracy: 8832/10000 (88.32%)
 
 Epoch 22
-Train: Loss=0.1276 Batch_id=97 Accuracy=95.85: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0069, Accuracy: 9097/10000 (90.97%)
+Train: Loss=0.1929 Batch_id=97 Accuracy=93.69: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0086, Accuracy: 8981/10000 (89.81%)
 
 Epoch 23
-Train: Loss=0.0465 Batch_id=97 Accuracy=97.16: 100%|██████████| 98/98 [00:52<00:00,  1.86it/s]
-Test set: Average loss: 0.0096, Accuracy: 9161/10000 (91.61%)
+Train: Loss=0.1346 Batch_id=97 Accuracy=95.24: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0110, Accuracy: 9104/10000 (91.04%)
 
 Epoch 24
-Train: Loss=0.0458 Batch_id=97 Accuracy=98.16: 100%|██████████| 98/98 [00:52<00:00,  1.88it/s]
-Test set: Average loss: 0.0052, Accuracy: 9197/10000 (91.97%)
+Train: Loss=0.0887 Batch_id=97 Accuracy=96.93: 100%|██████████| 98/98 [00:53<00:00,  1.83it/s]
+Test set: Average loss: 0.0073, Accuracy: 9180/10000 (91.80%)
 
 ```
 
@@ -222,23 +230,23 @@ Here is the sample result of model miss-classified images
 
 ## Accuracy Report for Each class   
 
-    Accuracy of airplane : 100 %
+    Accuracy of airplane : 76 %
 
-    Accuracy of automobile : 100 %
+    Accuracy of automobile : 95 %
 
-    Accuracy of  bird : 84 %
+    Accuracy of  bird : 86 %
 
-    Accuracy of   cat : 88 %
+    Accuracy of   cat : 76 %
 
-    Accuracy of  deer : 72 %
+    Accuracy of  deer : 92 %
 
     Accuracy of   dog : 100 %
 
-    Accuracy of  frog : 85 %
+    Accuracy of  frog : 95 %
 
-    Accuracy of horse : 84 %
+    Accuracy of horse : 100 %
 
-    Accuracy of  ship : 88 %
+    Accuracy of  ship : 100 %
 
     Accuracy of truck : 87 %
         
