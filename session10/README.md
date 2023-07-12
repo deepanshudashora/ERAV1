@@ -2,10 +2,10 @@
 - [File Structure](#File-Structure)
 - [Problem Statement](#Problem-Statement)
 - [Model Parameters](#Model-Parameters)
-- [Receptive Field and Output Shape Calculation of Layers](#Receptive-Field-and-Output-Shape-Calculation-of-Layers)
+- [Accuracy Report](#Accuracy-Report)
+- [Training Logs](#Training-Logs)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
-    * [Sample Output](#Sample-Output)
     * [Misclassified Images](#Misclassified-Images)
     * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class )
 
