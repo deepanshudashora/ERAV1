@@ -42,6 +42,11 @@ lr_finder.plot() # to inspect the loss-learning rate graph
 lr_finder.reset() # to reset the model and optimizer to their initial state
 ```
 
+<p align="center">
+    <img src="images/lr_finder.png" alt="centered image" />
+</p>
+
+
 LR suggestion: steepest gradient
 Suggested LR: 2.47E-02
 
