@@ -54,7 +54,7 @@ Suggested LR: 5.16E-02
 
 For gettting best out of it, model is trained on very high LR till 5th epoch and later till 24th epoch the LR was keep dropping
 
-# Model Parameters
+# [Model Parameters](https://github.com/deepanshudashora/custom_models/blob/main/models/resnet.py)
 
 ``````
 ==========================================================================================
@@ -252,7 +252,7 @@ Here is the sample result of model miss-classified images
     <img src="images/missclassified.png" alt="centered image" />
 </p>
 
-## Gradcam Analysis
+## [Gradcam Analysis](https://github.com/deepanshudashora/custom_models/blob/main/gradcam_utils.py)
 
 Here is the sample result of model miss-classified images
 
