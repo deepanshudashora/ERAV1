@@ -7,8 +7,9 @@
 - [Accuracy Report](#Accuracy-Report)
 - [Training Logs](#Training-Logs)
 - [Results](#Results)
-  * [Accuracy Plot](#Accuracy-Plot)
+  * [Accuracy Plot from Tensorboard](#Accuracy-Plot-from-Tensorboard)
   * [Misclassified Images](#Misclassified-Images)
+  * [Gradcam Analysis](#Gradcam-Analysis)
   * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class)
 
 # File Structure
@@ -138,10 +139,9 @@ Estimated Total Size (MB): 5084.19
 
 | Model Experiments                                                                                 | Found Max LR | Min LR | Best Validation accuracy | Best Training Accuray |
 | ------------------------------------------------------------------------------------------------- | ------------ | ------ | ------------------------ | --------------------- |
-| [Exp-1](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb) | 5.16E-02     | 0.02   | 80.87%                   | 75.25%                |
-| [Exp-2](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb) | 3.74E-02     | 0.01   | 86.60%                   | 81.87%                |
-| [Exp-3](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb) | 2.91E-02     | 0.01   | 88.35%                   | 84.56%     
-| [Exp-4](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb) | 1.67E-02     | 0.01   | 90.83%                   | 87.50%                |
+| [Exp-1](https://github.com/deepanshudashora/ERAV1/blob/master/session11/Experiments/s11_86_maxat3.ipynb) | 3.74E-02     | 0.01   | 86.60%                   | 81.87%                |
+| [Exp-2](https://github.com/deepanshudashora/ERAV1/blob/master/session11/Experiments/S11_80.ipynb) | 2.91E-02     | 0.01   | 88.35%                   | 84.56%     
+| [Exp-3](https://github.com/deepanshudashora/ERAV1/blob/master/session11/S11.ipynb) | 1.67E-02     | 0.01   | 90.83%                   | 87.50%                |
 
 # Training Logs
 
