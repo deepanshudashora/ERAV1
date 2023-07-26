@@ -22,7 +22,7 @@
   * [utils.py](https://github.com/deepanshudashora/custom_models/blob/main/utils.py) -> Contains supportive functions
   * [main.py](https://github.com/deepanshudashora/custom_models/blob/main/main.py) -> Contains code for fitting model in training and testing loops
   * [gradcam_utils.py](https://github.com/deepanshudashora/custom_models/blob/main/gradcam_utils.py) -> Contains code for running gradcam on model after training
-* [S11.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb) -> Notebook Contains model training
+* [S11.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session11/S11.ipynb) -> Notebook Contains model training
 
 # Problem Statement
 
