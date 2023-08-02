@@ -127,6 +127,40 @@ Estimated Total Size (MB): 2414.99
 </p>
 
 # [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session12/csv_logs_training/lightning_logs/version_0/metrics.csv)
+```
+         lr-Adam  step  train_loss  train_acc  epoch  val_loss  val_acc
+   88   0.005545  1799         NaN        NaN    NaN       NaN      NaN
+   89        NaN  1799    0.220482   0.914062   18.0       NaN      NaN
+   90   0.005043  1849         NaN        NaN    NaN       NaN      NaN
+   91        NaN  1849    0.235307   0.910156   18.0       NaN      NaN
+   92        NaN  1861         NaN        NaN   18.0  0.406253   0.8724
+   93   0.004541  1899         NaN        NaN    NaN       NaN      NaN
+   94        NaN  1899    0.197022   0.925781   19.0       NaN      NaN
+   95   0.004039  1949         NaN        NaN    NaN       NaN      NaN
+   96        NaN  1949    0.224633   0.933594   19.0       NaN      NaN
+   97        NaN  1959         NaN        NaN   19.0  0.367574   0.8873
+   98   0.003537  1999         NaN        NaN    NaN       NaN      NaN
+   99        NaN  1999    0.175551   0.921875   20.0       NaN      NaN
+   100  0.003035  2049         NaN        NaN    NaN       NaN      NaN
+   101       NaN  2049    0.148070   0.955078   20.0       NaN      NaN
+   102       NaN  2057         NaN        NaN   20.0  0.345555   0.8963
+   103  0.002532  2099         NaN        NaN    NaN       NaN      NaN
+   104       NaN  2099    0.139945   0.955078   21.0       NaN      NaN
+   105  0.002030  2149         NaN        NaN    NaN       NaN      NaN
+   106       NaN  2149    0.112343   0.960938   21.0       NaN      NaN
+   107       NaN  2155         NaN        NaN   21.0  0.311762   0.9046
+   108  0.001528  2199         NaN        NaN    NaN       NaN      NaN
+   109       NaN  2199    0.079441   0.972656   22.0       NaN      NaN
+   110  0.001026  2249         NaN        NaN    NaN       NaN      NaN
+   111       NaN  2249    0.084935   0.962891   22.0       NaN      NaN
+   112       NaN  2253         NaN        NaN   22.0  0.282218   0.9190
+   113  0.000524  2299         NaN        NaN    NaN       NaN      NaN
+   114       NaN  2299    0.074329   0.968750   23.0       NaN      NaN
+   115  0.000022  2349         NaN        NaN    NaN       NaN      NaN
+   116       NaN  2349    0.043582   0.988281   23.0       NaN      NaN
+   117       NaN  2351         NaN        NaN   23.0  0.268215   0.9219
+
+```
 
 # Results
 
