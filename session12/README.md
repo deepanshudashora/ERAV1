@@ -5,6 +5,7 @@
 - [Model Parameters](#Model-Parameters)
 - [Accuracy Report](#Accuracy-Report)
 - [Learning Rates](#Learning-Rates)
+- [Training Logs](#Training-Logs)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Misclassified Images](#Misclassified-Images)
@@ -125,6 +126,7 @@ Estimated Total Size (MB): 2414.99
     <img src="images/lr_jumps.png" alt="centered image" />
 </p>
 
+# [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session12/csv_logs_training/lightning_logs/version_0/metrics.csv)
 
 # Results
 
