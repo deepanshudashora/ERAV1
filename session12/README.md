@@ -4,7 +4,7 @@
 - [LR Finding](#LR-Finding)
 - [Model Parameters](#Model-Parameters)
 - [Accuracy Report](#Accuracy-Report)
-- [Training Logs](#Training-Logs)
+- [Learning Rates](#Learning-Rates)
 - [Results](#Results)
     * [Accuracy Plot](#Accuracy-Plot)
     * [Misclassified Images](#Misclassified-Images)
@@ -166,5 +166,5 @@ Here is the sample result of model miss-classified images
     Accuracy of truck : 82 %
         
 <p align="center">
-    <img src="images/accuracyperclass.png" alt="centered image" />
+    <img src="images/accuracy_per_class.png" alt="centered image" />
 </p>
