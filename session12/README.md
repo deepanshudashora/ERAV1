@@ -10,14 +10,17 @@
     * [Misclassified Images](#Misclassified-Images)
     * [Accuracy Report for Each class](#Accuracy-Report-for-Each-class )
 
-# File Structure
-* [custom_models](https://github.com/deepanshudashora/custom_models) -> A Repository contains files for training 
-    * [custom_resnet.py](https://github.com/deepanshudashora/custom_models/blob/main/custom_resnet.py) -> For importing model architecture
-    * [train.py](https://github.com/deepanshudashora/custom_models/blob/main/train.py) -> Contains training loop 
-    * [test.py](https://github.com/deepanshudashora/custom_models/blob/main/test.py) -> Contains code for running model on the test set 
+# File Structure 
+* [custom_models](https://github.com/deepanshudashora/custom_models) -> A Repository contains files for training
+    * [lightning_playground](https://github.com/deepanshudashora/custom_models/tree/main/lightning_playground) -> For using [pytorch-lightning](https://www.pytorchlightning.ai/index.html) modules 
+    * [custom_resnet.py](https://github.com/deepanshudashora/custom_models/blob/main/lightning_playground/modules/custom_resnet.py) -> For importing model architecture
+    * [main.py](https://github.com/deepanshudashora/custom_models/blob/main/lightning_playground/main.py) -> Contains training and testing loop 
     * [utils.py](https://github.com/deepanshudashora/custom_models/blob/main/utils.py) -> Contains supportive functions
+    * [dataset.py](https://github.com/deepanshudashora/custom_models/blob/main/dataset.py) -> For loading the dataset
 
-* [S12.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb) -> Notebook Contains model training
+* [S12_Training.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session12/S12_Training.ipynb) -> Notebook Contains model training
+* [csv_logs_training](https://github.com/deepanshudashora/ERAV1/tree/master/session12/csv_logs_training/) -> Contains training logs in csv format
+* [tf_logs](https://github.com/deepanshudashora/ERAV1/tree/master/session12/tf_logs) -> Contains tensor-board logs and best model 
   
 # Problem Statement
 1. Train CNN on cifar dataset with residual blocks
@@ -113,8 +116,8 @@ Estimated Total Size (MB): 2414.99
 |[Exp-1](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_95_90.ipynb)|3.31E-02|0.023|90.91%|95.88%|
 |[Exp-2](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_96_91.ipynb)|2.63E-02|0.02|91.32%|96.95%|
 |[Exp-3](https://github.com/deepanshudashora/ERAV1/blob/master/session10/experiments/S10_98_91.ipynb)|1.19E-02|0.01|91.72%|98.77%|
-|[S10.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb)|1.87E-02|0.01|91.80%|96.93%|
-
+|[Exp-4-TorchCode](https://github.com/deepanshudashora/ERAV1/blob/master/session10/S10.ipynb)|1.87E-02|0.01|91.80%|96.93%|
+|[Exp-5-Lightning-precision-16](https://github.com/deepanshudashora/ERAV1/blob/master/session12/S12_Training.ipynb)|1.87E-02|0.01|92.20%|98.8%|
 
 # Learning Rates
 
