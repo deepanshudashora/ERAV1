@@ -36,6 +36,17 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
     <img src="images/architecture.png" alt="centered image" />
 </p>
 
+# Training Procedure
+
+1. The model is trained on Tesla T4 (15GB GPU memory)
+2. The training is completed in two phases
+3. In the first training we see loss dropping correctly but in the second training it drops less
+4. The model starts overfitting on the dataset after 30 epochs
+5. Future Improvements
+     1. Train the model in 1 shot instead of two different phases
+     2. Keep a better batch size (Basically earn more money and buy a good GPU)
+     3. Data transformation also plays a vital role here
+     4. OneCycle LR range needs to be appropriately modified for a better LR
 
 # Accuracy Report
 
@@ -50,7 +61,7 @@ MAP: 0.29939851760864258
 
 # [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/merged_logs.csv)
 
-#### For faster execution we run the validation step after 20 epochs for first 20 epochs of training and after that after every 5 epochs till 40 epochs
+#### For faster execution we run the validation step after 20 epochs for the first 20 epochs of training and after that after every 5 epochs till 40 epochs
 
 ```
       Unnamed: 0   lr-Adam    step  train_loss  epoch  val_loss
