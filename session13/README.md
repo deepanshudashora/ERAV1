@@ -11,6 +11,9 @@
 * [custom_models](https://github.com/deepanshudashora/custom_models) -> A Repository contains files for training
     * [torch_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/torch_version) -> mainly used for reference 
     * [lightning_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version) -> For training the model
+* [train_loop_1.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/train_loop_1.ipynb) -> Contains first training loop (Till 20 epochs)
+* [train_loop_2.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/train_loop_2.ipynb) -> Contains second training loop (From 20 to 40 epochs)
+* [evaluation_and_results.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/evaluation_and_results.ipynb) -> Contains evaluation of model on test set 
 
 # Problem Statement
 1. Train Yolov3 on the PASCAL-VOC dataset without any pre-trained Model
