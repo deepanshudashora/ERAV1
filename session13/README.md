@@ -9,11 +9,11 @@
 
 # File Structure 
 * [custom_models](https://github.com/deepanshudashora/custom_models) -> A Repository contains files for training
-    * [torch_version](https://github.com/deepanshudashora/custom_models/tree/main/lightning_playground) -> mainly used for reference 
-    * [lightning_version](https://github.com/deepanshudashora/custom_models/blob/main/lightning_playground/modules/custom_resnet.py) -> For trainng the model
+    * [torch_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/torch_version) -> mainly used for reference 
+    * [lightning_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version) -> For training the model
 
 # Problem Statement
-1. Train Yolov3 on PASCAL-VOC dataset without any pretrained Model
+1. Train Yolov3 on the PASCAL-VOC dataset without any pre-trained Model
 
 # LR Finding 
 
@@ -48,9 +48,9 @@ MAP: 0.29939851760864258
 
 ```
 
-# [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session12/csv_logs_training/lightning_logs/version_0/metrics.csv)
+# [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/merged_logs.csv)
 
-#### For faster execution we run the valudation step after 20 epochs for fist 20 epochs of training and after that after every 5 epochs till 40 epochs
+#### For faster execution we run the validation step after 20 epochs for first 20 epochs of training and after that after every 5 epochs till 40 epochs
 
 ```
       Unnamed: 0   lr-Adam    step  train_loss  epoch  val_loss
