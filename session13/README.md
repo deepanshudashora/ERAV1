@@ -44,10 +44,20 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
 4. We run our two training loops separately and do not run any kind of validation on it, except validation loss
 5. Later we evaluate the model and get the numbers
 6. The lightning generally saves the model as .ckpt format, so we convert it to torch format with saving state dict as .pt format
-7. For doing this we use these two lines of code 
+7. For doing this we use these two lines of code
 
-4. The model starts overfitting on the dataset after 30 epochs
-5. Future Improvements
+```
+  best_model = torch.load(weights_path)
+  torch.save(best_model['state_dict'], f'best_model.pth')
+  litemodel = YOLOv3(num_classes=num_classes)
+  litemodel.load_state_dict(torch.load("best_model.pth",map_location='cpu'))
+  device = "cpu"
+  torch.save(litemodel.state_dict(), PATH)
+```
+   
+
+8. The model starts overfitting on the dataset after 30 epochs
+9. Future Improvements
      1. Train the model in 1 shot instead of two different phases
      2. Keep a better batch size (Basically earn more money and buy a good GPU)
      3. Data transformation also plays a vital role here
