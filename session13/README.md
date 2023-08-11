@@ -41,6 +41,11 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
 1. The model is trained on Tesla T4 (15GB GPU memory)
 2. The training is completed in two phases
 3. In the first training we see loss dropping correctly but in the second training it drops less
+4. We run our two training loops separately and do not run any kind of validation on it, except validation loss
+5. Later we evaluate the model and get the numbers
+6. The lightning generally saves the model as .ckpt format, so we convert it to torch format with saving state dict as .pt format
+7. For doing this we use these two lines of code 
+
 4. The model starts overfitting on the dataset after 30 epochs
 5. Future Improvements
      1. Train the model in 1 shot instead of two different phases
