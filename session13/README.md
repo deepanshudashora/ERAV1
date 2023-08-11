@@ -17,6 +17,10 @@
 
 # Problem Statement
 1. Train Yolov3 on the PASCAL-VOC dataset without any pre-trained Model
+2. Host it as a huggigface app 
+
+
+# [Huggingface APP](https://huggingface.co/spaces/wgetdd/YoloV3-PASCAL-VOC)
 
 # LR Finding 
 
@@ -43,11 +47,12 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
 
 1. The model is trained on Tesla T4 (15GB GPU memory)
 2. The training is completed in two phases
-3. In the first training we see loss dropping correctly but in the second training it drops less
-4. We run our two training loops separately and do not run any kind of validation on it, except validation loss
-5. Later we evaluate the model and get the numbers
-6. The lightning generally saves the model as .ckpt format, so we convert it to torch format with saving state dict as .pt format
-7. For doing this we use these two lines of code
+3. The first phase contains 20 epochs and second phase contains another 20 epochs
+4. In the first training we see loss dropping correctly but in the second training it drops less
+5. We run our two training loops separately and do not run any kind of validation on them, except for validation loss
+6. Later we evaluate the model and get the numbers
+7. The lightning generally saves the model as .ckpt format, so we convert it to torch format by saving state dict as .pt format
+8. For doing this we use these two lines of code
 
 ```
   best_model = torch.load(weights_path)
@@ -65,6 +70,12 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
      2. Keep a better batch size (Basically earn more money and buy a good GPU)
      3. Data transformation also plays a vital role here
      4. OneCycle LR range needs to be appropriately modified for a better LR
+
+# Data Transformation
+
+Along with the transforms mentioned in the [config file](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/config.py), we also apply **mosaic transform** on 75% images 
+
+[Reference](https://www.kaggle.com/code/nvnnghia/awesome-augmentation/notebook)
 
 # Accuracy Report
 
