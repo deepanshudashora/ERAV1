@@ -16,7 +16,7 @@ def seed_everything(seed=42):
     torch.backends.cudnn.benchmark = False
 
 
-DATASET = '/home/deepanshu/Desktop/yolofromscratch/PASCAL_VOC'
+DATASET = '/kaggle/input/pascal-voc-dataset-used-in-yolov3-video/PASCAL_VOC/'
 DEVICE = "cpu"
 seed_everything()  # If you want deterministic behavior
 NUM_WORKERS = 0
