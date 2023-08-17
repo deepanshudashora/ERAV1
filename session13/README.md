@@ -12,15 +12,17 @@
     * [torch_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/torch_version) -> mainly used for reference 
     * [lightning_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version) -> For training the model
  
-   #### [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)
-   * [train_loop_1.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_1.ipynb) -> Contains first training loop (Till 20 epochs)
-   * [train_loop_2.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_2.ipynb) -> Contains second training loop (From 20 to 40 epochs)
+#### [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)
+* [train_loop_1.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_1.ipynb) -> Contains first training loop (Till 20 epochs)
+* [train_loop_2.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_2.ipynb) -> Contains second training loop (From 20 to 40 epochs)
+
+#### Final Submission
 * (training.ipynb)(https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/training.ipynb) -> Contains parallel GPU training code
 * (final_evaluation.ipynb)(https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/final_evaluation.ipynb) -> Contains accuracy test and evaluation of model
 
 # Problem Statement
 1. Train Yolov3 on the PASCAL-VOC dataset without any pre-trained Model
-2. Host it as a huggigface app 
+2. Host it as a hugging face app 
 
 
 # [Huggingface APP](https://huggingface.co/spaces/wgetdd/YoloV3-PASCAL-VOC)
