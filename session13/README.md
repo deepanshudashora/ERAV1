@@ -161,21 +161,10 @@ MAP: 0.29939851760864258
 
 # Results
 
-## For epochs 0 to 19
+## loss curve
 
 <p align="center">
-    <img src="images/train_logs_1.png" alt="centered image" />
+    <img src="images/accuracy_curve.png" alt="centered image" />
 </p>
 
-## From 19 to 20
-
-<p align="center">
-    <img src="images/train_logs_2.png" alt="centered image" />
-</p>
-
-## Full training logs for loss
-
-<p align="center">
-    <img src="images/full_training.png" alt="centered image" />
-</p>
 
