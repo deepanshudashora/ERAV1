@@ -92,11 +92,11 @@ Along with the transforms mentioned in the [config file](https://github.com/deep
 # Accuracy Report
 
 ```
-Class accuracy is: 82.999725%
-No obj accuracy is: 96.828300%
-Obj accuracy is: 76.898473%
+Class accuracy is: 85.015236%
+No obj accuracy is: 98.522491%
+Obj accuracy is: 65.760597%
 
-MAP: 0.29939851760864258
+MAP: 0.4661380648612976
 
 ```
 
