@@ -12,9 +12,9 @@
     * [torch_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/torch_version) -> mainly used for reference 
     * [lightning_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version) -> For training the model
  
-## [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)
-   * [train_loop_1.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_1.ipynb) -> Contains first training loop (Till 20 epochs)
-   * [train_loop_2.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_2.ipynb) -> Contains second training loop (From 20 to 40 epochs)
+   #### [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)
+      * [train_loop_1.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_1.ipynb) -> Contains first training loop (Till 20 epochs)
+      * [train_loop_2.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_2.ipynb) -> Contains second training loop (From 20 to 40 epochs)
 * (training.ipynb)(https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/training.ipynb) -> Contains parallel GPU training code
 * (final_evaluation.ipynb)(https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/final_evaluation.ipynb) -> Contains accuracy test and evaluation of model
 
@@ -48,14 +48,14 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
 
 # Training Procedure
 
-## Experiment 1
+#### Experiment 1
    1. The model is trained on Tesla T4 (15GB GPU memory)
    2. The training is completed in two phases
    3. The first phase contains 20 epochs and the second phase contains another 20 epochs
    4. In the first training we see loss dropping correctly but in the second training it drops less
    5. We run our two training loops separately and do not run any kind of validation on them, except for validation loss
 
-## Experiment 2
+#### Experiment 2
    1. The model is trained on 2 Tesla t4 GPUs, with distributed training using PyTorch lightning
    2. For doing the distributed training we use the strategy ```ddp_notebook_find_unused_parameters_true```
 
