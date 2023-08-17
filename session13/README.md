@@ -100,7 +100,7 @@ MAP: 0.29939851760864258
 
 ```
 
-# [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/merged_logs.csv)
+# [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/training_logs/csv_training_logs/lightning_logs/version_0/metrics.csv)
 
 #### For faster execution we run the validation step after 20 epochs for the first 20 epochs of training and after that after every 5 epochs till 40 epochs
 
