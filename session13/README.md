@@ -12,10 +12,11 @@
     * [torch_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/torch_version) -> mainly used for reference 
     * [lightning_version](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version) -> For training the model
  
-      #### [Experiments](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)
+      #### [Experiments During Run](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)
       * [train_loop_1.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_1.ipynb) -> Contains first training loop (Till 20 epochs)
       * [train_loop_2.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/Experiments/train_loop_2.ipynb) -> Contains second training loop (From 20 to 40 epochs)
 
+ #### [Submission](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version)
  *  [training.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/training.ipynb) -> Contains parallel GPU training code
  *   [final_evaluation.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session13/lightning_version/final_evaluation.ipynb) -> Contains accuracy test and evaluation of model
 
