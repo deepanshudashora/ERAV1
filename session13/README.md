@@ -83,6 +83,13 @@ lr_finder.reset() # to reset the model and optimizer to their initial state
      4. OneCycle LR range needs to be appropriately modified for a better LR
       
 
+# Experiments 
+
+|Model Experiments|conclusion |
+|--|--|
+|[2 Step training](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experimentshttps://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version/Experiments)|Once resume the loss does not decrease properly|
+|[Parellel GPU ](https://github.com/deepanshudashora/ERAV1/tree/master/session13/lightning_version)|Works good and give us best results for training but val loss does not go below 4.3|
+|[dataset_multiresolution](https://github.com/deepanshudashora/custom_models/blob/main/YOLOv3/dataset_multiresolution.py) , [utills_multiresolution](https://github.com/deepanshudashora/custom_models/blob/main/YOLOv3/utils_multiresolution.py)|Training Time goes high and requires even a better GPU, due to Kaggle execution time issue there is no conclusion made for this|
 
 # Data Transformation
 
