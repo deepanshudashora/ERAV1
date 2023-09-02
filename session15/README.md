@@ -8,6 +8,12 @@
 - [Results](#Results)
   * [Accuracy Plot](#Accuracy-Plot)
 
+
+# Contributers
+
+[Anant Gupta](https://github.com/anantgupta129)
+[Deepanshu Dashora](https://github.com/deepanshudashora/)
+
 # File Structure
 
 * [TorcHood](https://github.com/anantgupta129/TorcHood/tree/main) -> TorcHood, a repository which makes torch and lightning training easy, [checkout the training guide to start using it](https://github.com/anantgupta129/TorcHood/tree/main/docs)
