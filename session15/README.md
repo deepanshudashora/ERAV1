@@ -3,10 +3,7 @@
 - [File Structure](#File-Structure)
 - [Problem Statement](#Problem-Statement)
 - [LR Finding](#LR-Finding)
-- [Learning Rates](#Learning-Rates)
 - [Training Logs](#Training-Logs)
-- [Results](#Results)
-  * [Accuracy Plot](#Accuracy-Plot)
 
 
 # Contributers
