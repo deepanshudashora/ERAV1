@@ -21,9 +21,9 @@
   * [torchood](https://github.com/anantgupta129/TorcHood/tree/main/torchood) -> For using data modules, utils and models for training
   * [bilang_module.py](https://github.com/anantgupta129/TorcHood/blob/main/torchood/models/bilang_module.py) -> Contains lightning code for trainer
   * [opus_datamodule.py](https://github.com/anantgupta129/TorcHood/blob/main/torchood/data/opus_datamodule.py) -> Contains lightning code for dataset
-  * [trainig_hyperparameters](https://github.com/anantgupta129/TorcHood/blob/main/torchood/configs/bilang_config.py) -> Contains hyperparameters used in training
-* [S15_Training.ipynb](https://github.com/deepanshudashora/ERAV1/blob/master/session12/S12_Training.ipynb) -> Notebook Contains model training
-* [Wandb Logs](https://github.com/deepanshudashora/ERAV1/tree/master/session12/tf_logs) -> Contains tensor-board logs and best model
+  * [trainig configuration](https://github.com/anantgupta129/TorcHood/blob/main/torchood/configs/bilang_config.py) -> Contains hyperparameters used in training
+* [S15 Training notebook](train.ipynb) -> Notebook Contains model training
+* [Wandb Logs](https://wandb.ai/anantgupta129/Transformers-BiLang/workspace?workspace=user-anantgupta129) -> Contains tensor-board logs and best model
 
 # Problem Statement
 
@@ -35,22 +35,17 @@
 
 For finding the Optimal learning rate we use [torchood&#39;s autolr finder](https://github.com/anantgupta129/TorcHood/blob/main/torchood/utils/helper.py)
 
-LR suggestion: steepest gradient
-Suggested LR: 1.87E-02
-
-For gettting best out of it, model is trained on very high LR till 5th epoch and later till 24th epoch the LR was keep dropping
-
 # Model Parameters
 
 ``````
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃   ┃ Name            ┃ Type             ┃ Params ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ 0 │ net             │ Transformer      │ 75.1 M │
+└───┴─────────────────┴──────────────────┴────────┘
 
 ``````
 
-# Learning Rates
-
-<p align="center">
-    <img src="images/lr_jumps.png" alt="centered image" />
-</p>
 
 # [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session12/csv_logs_training/lightning_logs/version_0/metrics.csv)
 
@@ -87,10 +82,5 @@ Epoch 9/9  ━━━━━━━━━━━━━━━━━━━━━━━
 
 # Results
 
-## Accuracy Plot
+- training loss: 1.438
 
-Here is the Accuracy and Loss metric plot for the model
-
-<p align="center">
-    <img src="images/accuracy_curve.png" alt="centered image" />
-</p>
