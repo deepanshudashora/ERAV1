@@ -72,6 +72,13 @@ We push the logic further by generating batches made of similar length sequences
     <img src="images/uniform_length_batching.png" alt="centered image" />
 </p>
 
+# Parameter Sharing
+
+<p align="center">
+    <img src="images/ps.png" alt="centered image" />
+</p>
+
+
 # [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session12/csv_logs_training/lightning_logs/version_0/metrics.csv)
 
 ```
