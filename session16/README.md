@@ -52,31 +52,46 @@ For finding the Optimal learning rate we use [torchood&#39;s autolr finder](http
 
 # [Dynamic Padding](https://github.com/anantgupta129/TorcHood/blob/trf_speed_up/torchood/data/components/opus_books.py)
 
-A batch of sequences require them to have the exact same length to build the batch matrix representation. Because real-life NLP datasets are always made of texts of variable lengths, we often need to make some sequences shorter by truncating them, and some others longer by adding at the end a repeated fake token called a “pad” token.
+In the real world of Natural Language Processing (NLP), dealing with text data of varying lengths is a common challenge. When we aim to process such data in batches, it's crucial that all sequences within a batch have the same length to create a uniform matrix representation. Achieving this uniformity involves a technique known as "dynamic padding."
 
 <p align="center">
     <img src="images/fixed_padding_length.png" alt="centered image" />
 </p>
 
-we limit the number of added pad tokens to reach the length of the longest sequence of each mini-batch instead of a fixed value set for the whole train set Because the number of added tokens changes across mini-batches, we call it "dynamic" padding.
+Dynamic padding involves modifying sequences to reach a common length within each batch, ensuring efficient processing in Transformer models. Rather than applying a fixed padding length across all sequences, dynamic padding adapts to the specific requirements of each batch.
 
-This becomes important because the pad token doesn’t represent a real word, when most computations are done, before computing the loss, we erase the pad token signal by multiplying it by 0 through the “attention mask” matrix for each sample, which identifies the [PAD] tokens and tells Transformer to ignore them
+Instead of rigidly appending a fixed number of pad tokens to each sequence, we limit the number of added pad tokens to match the length of the longest sequence within the batch. This flexibility minimizes the unnecessary use of pad tokens and is why we call it "dynamic" padding.
+
+The pad token, typically representing no meaningful word, needs to be handled carefully during computations. Before calculating the loss, we nullify the pad token's impact by multiplying it by 0 through an "attention mask" matrix for each sample. This mask identifies and instructs the Transformer to disregard the \[PAD\] tokens during processing.
 
 <p align="center">
     <img src="images/dynamic_padding.png" alt="centered image" />
 </p>
 
-We push the logic further by generating batches made of similar length sequences so we avoid extreme cases where most sequences in the mini-batch are short and we are required to add lots of pad tokens to each of them because 1 sequence of the same mini-batch is very long
+To further enhance efficiency, we strive to create batches with sequences of similar lengths. This approach helps us avoid situations where most sequences in a mini-batch are short, requiring the addition of numerous pad tokens to each of them due to the presence of a single very long sequence.
+
+By implementing dynamic padding and optimizing batch generation, we ensure that Transformer models can efficiently handle real-world NLP datasets with varying sequence lengths, leading to more effective and resource-efficient NLP applications.
 
 <p align="center">
     <img src="images/uniform_length_batching.png" alt="centered image" />
 </p>
 
-# Parameter Sharing
+# [Parameter Sharing](https://github.com/anantgupta129/TorcHood/blob/trf_speed_up/torchood/models/components/bilang_transformer.py)
+
+[REFERENCE](https://arxiv.org/pdf/2104.06022.pdf)
 
 <p align="center">
     <img src="images/ps.png" alt="centered image" />
 </p>
+
+There are three major types for parameter sharing
+
+1. Sequence : The simplest strategy is to assign the same parameters to sequential⌊N/M⌋ layers.We name this strategy SEQUENCE.For example,when we set M=3 and N=6,two sequential layers share their parameters as illustrated in Figure, Imagine group of 6 friends sharing 3 toys together, where 2 friends needs to share same toy
+
+2. Cycle : In CYCLE ,we stack M layers whose parameters are independent from each other.Then,we repeat stacking the M layers with the identical order to the first M layers until the total number of layers reaches N.When we set M=3 and N=6,we stack 3 layers twice as illustrated in Figure.  For example you start with 3 friends and 3 different toys. You give them each a toy just like before. Then, you do it again with the same 3 toys for the next 3 friends. It's like going around in a circle twice. So, each friend has a different toy, and you follow this cycle of sharing.
+
+3. CYCLE(REV) : In this strategy,we repeat stacking M layers in the same manner as CYCLE until M∗(⌈N/M⌉−1) layers.For the remaining layers, we stack M layers in the reverse order.When we set M=3 and N=6,we stack 3 layers and then stack the 3 layers in the reverse order as in Figure .Thus,the lowest layer and highest layer share parameters. For example you start with 3 friends again, and they each get a different toy, just like before. But this time, for the last 3 friends, you give them the same toys in the opposite order. So, the first friend gets the last toy, the second friend gets the second-to-last toy, and the third friend gets the first toy. It's like sharing toys in a special way!
+
 
 
 # [Training Logs](https://github.com/deepanshudashora/ERAV1/blob/master/session12/csv_logs_training/lightning_logs/version_0/metrics.csv)
