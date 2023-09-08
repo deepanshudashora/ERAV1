@@ -96,57 +96,26 @@ There are three major types for parameter sharing
 
 # [Training Logs](https://wandb.ai/anantgupta129/Transformers-BiLang/reports/Transformers-Bi-Language-Model-on-Opus-Books-Dataset--Vmlldzo1MzQyNDU1)
 
-```
+<p align="center">
+    <img src="images/training_logs.png" alt="centered image" />
+</p>
 
-Epoch 0/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:06:22 • 0:00:00 2.41it/s v_num: mcyz train/loss: 3.977 
-
-Epoch 1/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:58 • 0:00:00 2.55it/s v_num: mcyz train/loss: 2.903   
-
-                                                                                 val/cer: 5.01 val/wer: 15.263   
-
-
-Epoch 2/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:06:01 • 0:00:00 2.55it/s v_num: mcyz train/loss: 2.12  
-
-                                                                                 val/cer: 4.795 val/wer: 14.441  
-
-
-Epoch 3/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:59 • 0:00:00 2.55it/s v_num: mcyz train/loss: 1.943   
-
-                                                                                 val/cer: 3.504 val/wer: 9.555   
-
-
-Epoch 4/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:58 • 0:00:00 2.56it/s v_num: mcyz train/loss: 1.711   
-
-                                                                                 val/cer: 4.444 val/wer: 13.538  
-
-
-Epoch 5/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:58 • 0:00:00 2.56it/s v_num: mcyz train/loss: 1.631   
-
-                                                                                 val/cer: 3.597 val/wer: 11.055  
-
-
-Epoch 6/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:58 • 0:00:00 2.56it/s v_num: mcyz train/loss: 1.545   
-
-                                                                                 val/cer: 3.717 val/wer: 11.277  
-
-
-Epoch 7/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:06:19 • 0:00:00 2.40it/s v_num: mcyz train/loss: 1.489   
-
-                                                                                 val/cer: 3.938 val/wer: 12.006  
-
-
-Epoch 8/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:58 • 0:00:00 2.56it/s v_num: mcyz train/loss: 1.447   
-
-                                                                                 val/cer: 6.109 val/wer: 13.8  
-
-
-Epoch 9/9  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910/910 0:05:58 • 0:00:00 2.56it/s v_num: mcyz train/loss: 1.438   
-
-                                                                                 val/cer: 4.04 val/wer: 11.597
-
-
-```
 
 # Results
 
-- training loss: 1.438
+
+```
+dp : Dyanmic Padding
+ps : Parameter Sharing (CYCLE(REV))
+ocp : One Cycle Policy
+```
+
+
+| Model Description      |   Score   |
+|------------------------|----------:|
+| dp+ps+ocp+lion         | 6.3269567 |
+| dynamic_padding+ps+adam     | 1.3877008 |
+| dp+ps+ocp+adam              | 1.3868837 |
+| dynamic_padding+adam        | 1.3858194 |
+| dp+ps+ocp3phase+adam        | 1.3800205 |
+| dp+ps+ocp+adamw        | 1.3791476 |
