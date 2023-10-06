@@ -32,7 +32,7 @@
 
 # Inference and Huggigface APP 
 
-For running the models demo, Here is the [huggigface App hosted with inference code and generated emebeddings](https://huggingface.co/spaces/wgetdd/CLIP_Playground) 
+**For running the models demo, Here is the ***[huggigface App hosted with inference code and generated emebeddings](https://huggingface.co/spaces/wgetdd/CLIP_Playground)***** 
 
 
 
@@ -44,7 +44,7 @@ For running the models demo, Here is the [huggigface App hosted with inference c
 
 [Rank Images based on Prompt](https://github.com/mehdidc/clip_rerank)
 
-[Getting Statted With CLIP](https://github.com/andreRibeiro1989/medium/blob/ed800bad2c636049ea789dfd77598a8b72e3e42f/clip_getting_started.ipynb?source=post_page-----abb4bdf5dbd2--------------------------------)
+[Getting Started With CLIP](https://github.com/andreRibeiro1989/medium/blob/ed800bad2c636049ea789dfd77598a8b72e3e42f/clip_getting_started.ipynb?source=post_page-----abb4bdf5dbd2--------------------------------)
 
 [Image to Image Search](https://github.com/akgeni/applied_clip/blob/main/scalable_reverse_image_search/scalable_reverse_image_search_clip.ipynb)
 
