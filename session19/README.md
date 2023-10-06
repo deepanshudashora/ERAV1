@@ -34,7 +34,11 @@
 
 For running the models demo, Here is the [huggigface App hosted with inference code and generated emebeddings](https://huggingface.co/spaces/wgetdd/CLIP_Playground) 
 
+
+
 # References
+
+[OpenCLIP](https://github.com/mlfoundations/open_clip)
 
 [Article for CLIP Image search](https://www.pinecone.io/learn/clip-image-search/)
 
