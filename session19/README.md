@@ -14,12 +14,12 @@
 
 # File Structure
 
-* [cifar10_linear_probe_evaluation.py](/home/deepanshudashora/Desktop/ERAV1/session19/cifar10_linear_probe_evaluation.py) -> For training logistic regression on extracted features of CIFAR10 from CLIP models
-* [cifar20_zero_shot_classification.py](/home/deepanshudashora/Desktop/ERAV1/session19/cifar20_zero_shot_classification.py) -> For training CIFAR10 zero shot classification
-* [mnist_zero_shot_classification.py](/home/deepanshudashora/Desktop/ERAV1/session19/mnist_zero_shot_classification.py) -> For training MNIST zero shot classification
-* [generate_caption.py](/home/deepanshudashora/Desktop/ERAV1/session19/generate_caption.pyy) -> Image caption generation using CLIP
-* [image_search_data_generation.py](/home/deepanshudashora/Desktop/ERAV1/session19/image_search_data_generation.py) -> Data Prepration and embeddings for image to image search 
-* [text_to_image_search_data_prepare.py](/home/deepanshudashora/Desktop/ERAV1/session19/text_to_image_search_data_prepare.py) -> For Generating embeddings for text to image search 
+* [cifar10_linear_probe_evaluation.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/cifar10_linear_probe_evaluation.py) -> For training logistic regression on extracted features of CIFAR10 from CLIP models
+* [cifar20_zero_shot_classification.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/cifar20_zero_shot_classification.py) -> For training CIFAR10 zero shot classification
+* [mnist_zero_shot_classification.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/mnist_zero_shot_classification.py) -> For training MNIST zero shot classification
+* [generate_caption.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/generate_caption.pyy) -> Image caption generation using CLIP
+* [image_search_data_generation.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/image_search_data_generation.py) -> Data Prepration and embeddings for image to image search 
+* [text_to_image_search_data_prepare.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/text_to_image_search_data_prepare.py) -> For Generating embeddings for text to image search 
 
 
 # Problem Statement
