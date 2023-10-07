@@ -18,7 +18,7 @@
 -----------------------------------
    * For Training
   
-     * [image_search_data_generation.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/CLIP/image_search_data_generation.py) -> Data Prepration and embeddings for image to image search 
+     * [image_search_data_generation.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/CLIP/image_search_data_generation.py) -> Data Preparation and embeddings for image to image search 
      * [text_to_image_search_data_prepare.py](https://github.com/deepanshudashora/ERAV1/blob/master/session19/CLIP/text_to_image_search_data_prepare.py) -> For Generating embeddings for text to image search 
   
   * Inference
