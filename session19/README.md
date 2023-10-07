@@ -37,18 +37,21 @@
 # Problem Statement
 
 **Perform Experiments with CLIP models and understand the structure**
+**Make a Gradio APP for fastsam inference**
 
-# Dataset info
+# Dataset info for CLIP
 
 **The experiments are performed on ***[flicker8k Dataset available on Kaggle](https://www.kaggle.com/datasets/adityajn105/flickr8k)*****
 
-# Inference and Huggigface APP 
+# Inference and Huggigface APP for CLIP
 
 **For running the models demo, Here is the ***[huggigface App hosted with inference code and generated emebeddings](https://huggingface.co/spaces/wgetdd/CLIP_Playground)***** 
 
 
 
 # References
+
+[Fast-Sam](https://github.com/CASIA-IVA-Lab/FastSAM/tree/main)
 
 [OpenCLIP](https://github.com/mlfoundations/open_clip)
 
