@@ -2,9 +2,9 @@
 
 - [File Structure](#File-Structure)
 - [Problem Statement](#Problem-Statement)
-- [Dataset info](#Dataset-info)
-- [Sample Results](#sample-Results)
-- [References](References)
+- [Dataset info for CLIP](#Dataset-info-for-CLIP)
+- [Inference and Huggigface APP for CLIP](#Inference-and-Huggigface-APP-for-CLIP)
+- [References](#References)
 
 # Contributers
 
