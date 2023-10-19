@@ -21,7 +21,7 @@
 
 # Problem Statement
 
-***Perform Experiments with Stable Diffusion and make a huggigface hosted gradio app***
+***Perform Experiments with Stable Diffusion and make a hugging face hosted app***
 
 # Inference and Huggigface APP for CLIP
 
@@ -31,7 +31,7 @@
 
 ** Prompt = A book writer thinking about his love life and writing poems **
 
-***Without color dominace***
+***Without color dominance ***
 
 <p align="center">
     <img src="images/without_color_dominance.png" alt="centered image" />
@@ -45,9 +45,9 @@
 
 ***Mixed prompts***
 
-**prompt1 = A book writer thinking about his love life and writing poems **
+**prompt1 = A book writer thinking about his love life and writing poems**
 
-**prompt2 = heavy raining and huge clouds with smoke in background**
+**prompt2 = heavy rain and huge clouds with smoke in the background**
 
 <p align="center">
     <img src="images/mixed_prompt.png" alt="centered image" />
