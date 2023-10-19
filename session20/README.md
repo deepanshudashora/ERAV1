@@ -31,7 +31,7 @@
 
 ** Prompt = A book writer thinking about his love life and writing poems **
 
-***Without color dominance ***
+***Without color dominance***
 
 <p align="center">
     <img src="images/without_color_dominance.png" alt="centered image" />
