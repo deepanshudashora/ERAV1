@@ -29,7 +29,7 @@
 
 # Examples
 
-** Prompt = A book writer thinking about his love life and writing poems **
+**Prompt = A book writer thinking about his love life and writing poems**
 
 ***Without color dominance***
 
