@@ -20,8 +20,6 @@
 
 ***Perform Experiments on different maps for running the car and figuring out the roads***
 
-***Perform Experiments on puzzle game to achive reward as soon as possible***
-
 # Outputs
 
 ### [**youtube video link for car game**](https://www.youtube.com/watch?v=7BzXC0SX5B8)
